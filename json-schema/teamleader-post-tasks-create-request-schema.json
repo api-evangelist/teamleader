@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-tasks-create-request-schema.json",
+  "title": "PostTasksCreateRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostTasksCreateRequest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "due_on": {
+      "type": "string"
+    },
+    "work_type_id": {
+      "type": "string"
+    },
+    "milestone_id": {
+      "type": "string",
+      "description": "Only available for users that have access to the old projects module"
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Only available for users that have access to the new projects module"
+    },
+    "deal_id": {
+      "type": "string"
+    },
+    "ticket_id": {
+      "type": "string"
+    },
+    "estimated_duration": {
+      "type": "object"
+    },
+    "assignee": {
+      "type": "object"
+    },
+    "customer": {
+      "type": "object"
+    },
+    "custom_fields": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "work_type_id"
+  ]
+}

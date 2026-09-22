@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-invoices-update-request-schema.json",
+  "title": "PostInvoicesUpdateRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostInvoicesUpdateRequest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "invoicee": {
+      "type": "object"
+    },
+    "payment_term": {
+      "type": "object"
+    },
+    "currency": {
+      "type": "object"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "purchase_order_number": {
+      "type": "string"
+    },
+    "grouped_lines": {
+      "type": "object"
+    },
+    "invoice_date": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string",
+      "description": "This is the remarks field"
+    },
+    "invoice_content": {
+      "type": "string",
+      "description": "Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise."
+    },
+    "discounts": {
+      "type": "object"
+    },
+    "expected_payment_method": {
+      "type": "object"
+    },
+    "custom_fields": {
+      "type": "object"
+    },
+    "document_template_id": {
+      "type": "string"
+    },
+    "delivery_date": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

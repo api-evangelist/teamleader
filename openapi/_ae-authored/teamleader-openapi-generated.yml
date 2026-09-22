@@ -1,0 +1,2246 @@
+# x-archived-from: teamleader-openapi-generated.yml
+# x-archived-on: 2026-09-22
+openapi: 3.1.0
+info:
+  title: Teamleader API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 58 operation(s) read from 60 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Teamleader has published no machine-readable contract
+    that the pipeline could find. Engine: anthropic.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://developer.focus.teamleader.eu/docs/authentication
+  - https://developer.focus.teamleader.eu/docs/general-principles
+  - https://developer.focus.teamleader.eu/docs/api/deals-list
+  - https://developer.focus.teamleader.eu/docs/api/deals-info
+  - https://developer.focus.teamleader.eu/docs/api/deals-create
+  - https://developer.focus.teamleader.eu/docs/api/deals-update
+  - https://developer.focus.teamleader.eu/docs/api/deals-move
+  - https://developer.focus.teamleader.eu/docs/api/deals-win
+  - https://developer.focus.teamleader.eu/docs/api/deals-lose
+  - https://developer.focus.teamleader.eu/docs/api/deals-delete
+  - https://developer.focus.teamleader.eu/docs/api/lost-reasons-list
+  - https://developer.focus.teamleader.eu/docs/api/level-two-areas-list
+  - https://developer.focus.teamleader.eu/docs/api/files-list
+  - https://developer.focus.teamleader.eu/docs/api/files-info
+  - https://developer.focus.teamleader.eu/docs/api/files-download
+  - https://developer.focus.teamleader.eu/docs/api/files-upload
+  - https://developer.focus.teamleader.eu/docs/api/files-delete
+  - https://developer.focus.teamleader.eu/docs/api/ticket-status-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-info
+  - https://developer.focus.teamleader.eu/docs/api/tasks-create
+  - https://developer.focus.teamleader.eu/docs/api/tasks-update
+  - https://developer.focus.teamleader.eu/docs/api/tasks-complete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-reopen
+  - https://developer.focus.teamleader.eu/docs/api/tasks-delete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-schedule
+  - https://developer.focus.teamleader.eu/docs/api/user-availability-daily
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list
+  - https://developer.focus.teamleader.eu/docs/api/tickets-info
+  - https://developer.focus.teamleader.eu/docs/api/tickets-create
+  - https://developer.focus.teamleader.eu/docs/api/tickets-update
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+  - https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+  - https://developer.focus.teamleader.eu/docs/api/timers-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-list
+  - https://developer.focus.teamleader.eu/docs/api/contacts-info
+  - https://developer.focus.teamleader.eu/docs/api/contacts-add
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-delete
+  - https://developer.focus.teamleader.eu/docs/api/contacts-tag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-untag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-link-to-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-unlink-from-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update-company-link
+  - https://developer.focus.teamleader.eu/docs/api/contacts-upload-avatar
+  - https://developer.focus.teamleader.eu/docs/api/days-off-bulk-delete
+  - https://developer.focus.teamleader.eu/docs/api/expenses-list
+  - https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-info
+  - https://developer.focus.teamleader.eu/docs/api/invoices-download
+  - https://developer.focus.teamleader.eu/docs/api/invoices-draft
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update-booked
+  - https://developer.focus.teamleader.eu/docs/api/invoices-copy
+  - https://developer.focus.teamleader.eu/docs/api/invoices-book
+  - https://developer.focus.teamleader.eu/docs/api/invoices-delete
+servers:
+- url: https://api.focus.teamleader.eu
+paths:
+  /contacts.add:
+    post:
+      operationId: post_contacts_add
+      tags:
+      - Contacts
+      summary: Add a new contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-add
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsAddRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostContactsAddResponse'
+  /contacts.delete:
+    post:
+      operationId: post_contacts_delete
+      tags:
+      - Contacts
+      summary: Delete a contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.info:
+    post:
+      operationId: post_contacts_info
+      tags:
+      - Contacts
+      summary: Get details for a single contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostContactsInfoResponse'
+  /contacts.linkToCompany:
+    post:
+      operationId: post_contacts_linkToCompany
+      tags:
+      - Contacts
+      summary: Link a contact to a company.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-link-to-company
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsLinktocompanyRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.list:
+    post:
+      operationId: post_contacts_list
+      tags:
+      - Contacts
+      summary: Get a list of contacts.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-list
+      parameters:
+      - name: includes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of optional includes
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostContactsListResponse'
+  /contacts.tag:
+    post:
+      operationId: post_contacts_tag
+      tags:
+      - Contacts
+      summary: Add a new or existing tag to a contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-tag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsTagRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.unlinkFromCompany:
+    post:
+      operationId: post_contacts_unlinkFromCompany
+      tags:
+      - Contacts
+      summary: Unlink a contact from a company.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-unlink-from-company
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsUnlinkfromcompanyRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.untag:
+    post:
+      operationId: post_contacts_untag
+      tags:
+      - Contacts
+      summary: Remove a tag from a contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-untag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsUntagRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.update:
+    post:
+      operationId: post_contacts_update
+      tags:
+      - Contacts
+      summary: Update a contact with tags and custom fields, replacing collections entirely.
+      x-source: https://developer.focus.teamleader.eu/docs/general-principles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostContactsUpdateResponse'
+  /contacts.updateCompanyLink:
+    post:
+      operationId: post_contacts_updateCompanyLink
+      tags:
+      - Contacts
+      summary: Update contact to company link.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-update-company-link
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsUpdatecompanylinkRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /contacts.uploadAvatar:
+    post:
+      operationId: post_contacts_uploadAvatar
+      tags:
+      - Contacts
+      summary: Update the avatar of a contact.
+      x-source: https://developer.focus.teamleader.eu/docs/api/contacts-upload-avatar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostContactsUploadavatarRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /daysOff.bulkDelete:
+    post:
+      operationId: post_daysOff_bulkDelete
+      tags:
+      - Daysoff
+      summary: Deletes a list of days off for the given user.
+      x-source: https://developer.focus.teamleader.eu/docs/api/days-off-bulk-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDaysoffBulkdeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.create:
+    post:
+      operationId: post_deals_create
+      tags:
+      - Deals
+      summary: Create a new deal for a customer.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsCreateResponse'
+  /deals.delete:
+    post:
+      operationId: post_deals_delete
+      tags:
+      - Deals
+      summary: Delete a deal.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.info:
+    post:
+      operationId: post_deals_info
+      tags:
+      - Deals
+      summary: Get details for a single deal.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-info
+      parameters:
+      - name: includes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of optional includes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsInfoResponse'
+  /deals.list:
+    post:
+      operationId: post_deals_list
+      tags:
+      - Deals
+      summary: Get a list of deals.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-list
+      parameters:
+      - name: includes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of optional includes
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsListResponse'
+  /deals.lose:
+    post:
+      operationId: post_deals_lose
+      tags:
+      - Deals
+      summary: Mark a deal as lost.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-lose
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsLoseRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.move:
+    post:
+      operationId: post_deals_move
+      tags:
+      - Deals
+      summary: Move the deal to a different phase.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-move
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsMoveRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.update:
+    post:
+      operationId: post_deals_update
+      tags:
+      - Deals
+      summary: Update a deal.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.win:
+    post:
+      operationId: post_deals_win
+      tags:
+      - Deals
+      summary: Mark a deal as won.
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-win
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsWinRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /expenses.list:
+    post:
+      operationId: post_expenses_list
+      tags:
+      - Expenses
+      summary: Get a list of all expenses.
+      x-source: https://developer.focus.teamleader.eu/docs/api/expenses-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostExpensesListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostExpensesListResponse'
+  /files.delete:
+    post:
+      operationId: post_files_delete
+      tags:
+      - Files
+      summary: Delete a file.
+      x-source: https://developer.focus.teamleader.eu/docs/api/files-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFilesDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /files.download:
+    post:
+      operationId: post_files_download
+      tags:
+      - Files
+      summary: Request the download link for a file.
+      x-source: https://developer.focus.teamleader.eu/docs/api/files-download
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFilesDownloadRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostFilesDownloadResponse'
+  /files.info:
+    post:
+      operationId: post_files_info
+      tags:
+      - Files
+      summary: Get details for a single file.
+      x-source: https://developer.focus.teamleader.eu/docs/api/files-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFilesInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostFilesInfoResponse'
+  /files.list:
+    post:
+      operationId: post_files_list
+      tags:
+      - Files
+      summary: Get a list of files.
+      x-source: https://developer.focus.teamleader.eu/docs/api/files-list
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFilesListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostFilesListResponse'
+  /files.upload:
+    post:
+      operationId: post_files_upload
+      tags:
+      - Files
+      summary: Request the upload link for a file.
+      x-source: https://developer.focus.teamleader.eu/docs/api/files-upload
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFilesUploadRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostFilesUploadResponse'
+  /invoices.book:
+    post:
+      operationId: post_invoices_book
+      tags:
+      - Invoices
+      summary: Book a draft invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesBookRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /invoices.copy:
+    post:
+      operationId: post_invoices_copy
+      tags:
+      - Invoices
+      summary: Creates a new draft invoice based on another invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-copy
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesCopyRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoicesCopyResponse'
+  /invoices.delete:
+    post:
+      operationId: post_invoices_delete
+      tags:
+      - Invoices
+      summary: Delete an existing invoice.
+      description: Delete an existing invoice. Only possible for draft invoices or the last booked invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /invoices.download:
+    post:
+      operationId: post_invoices_download
+      tags:
+      - Invoices
+      summary: Download an invoice in a specific format.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-download
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesDownloadRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoicesDownloadResponse'
+  /invoices.draft:
+    post:
+      operationId: post_invoices_draft
+      tags:
+      - Invoices
+      summary: Draft a new invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-draft
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesDraftRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoicesDraftResponse'
+  /invoices.info:
+    post:
+      operationId: post_invoices_info
+      tags:
+      - Invoices
+      summary: Get details for a single invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoicesInfoResponse'
+  /invoices.list:
+    post:
+      operationId: post_invoices_list
+      tags:
+      - Invoices
+      summary: List invoices with filtering and pagination support.
+      x-source: https://developer.focus.teamleader.eu/docs/general-principles
+      parameters:
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter criteria for invoices, such as department_id
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Pagination settings with size and number
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostInvoicesListResponse'
+  /invoices.update:
+    post:
+      operationId: post_invoices_update
+      tags:
+      - Invoices
+      summary: Update a draft invoice. Booked invoices cannot be updated.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /invoices.updateBooked:
+    post:
+      operationId: post_invoices_updateBooked
+      tags:
+      - Invoices
+      summary: Update a booked invoice.
+      x-source: https://developer.focus.teamleader.eu/docs/api/invoices-update-booked
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInvoicesUpdatebookedRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /levelTwoAreas.list:
+    post:
+      operationId: post_levelTwoAreas_list
+      tags:
+      - Leveltwoareas
+      summary: Get a list of level two areas (which correspond to provinces, departments or states in most countries).
+      x-source: https://developer.focus.teamleader.eu/docs/api/level-two-areas-list
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLeveltwoareasListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLeveltwoareasListResponse'
+  /lostReasons.list:
+    post:
+      operationId: post_lostReasons_list
+      tags:
+      - Lostreasons
+      summary: Get a list of lost reasons for deals.
+      x-source: https://developer.focus.teamleader.eu/docs/api/lost-reasons-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLostreasonsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLostreasonsListResponse'
+  /paymentMethods.list:
+    post:
+      operationId: post_paymentMethods_list
+      tags:
+      - Paymentmethods
+      summary: Get a list of payment methods.
+      x-source: https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentmethodsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentmethodsListResponse'
+  /tasks.complete:
+    post:
+      operationId: post_tasks_complete
+      tags:
+      - Tasks
+      summary: Mark a task as complete.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-complete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksCompleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /tasks.create:
+    post:
+      operationId: post_tasks_create
+      tags:
+      - Tasks
+      summary: Create a new task.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTasksCreateResponse'
+  /tasks.delete:
+    post:
+      operationId: post_tasks_delete
+      tags:
+      - Tasks
+      summary: Delete a task.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /tasks.info:
+    post:
+      operationId: post_tasks_info
+      tags:
+      - Tasks
+      summary: Get information about a task.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTasksInfoResponse'
+  /tasks.list:
+    post:
+      operationId: post_tasks_list
+      tags:
+      - Tasks
+      summary: Get a list of tasks.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTasksListResponse'
+  /tasks.reopen:
+    post:
+      operationId: post_tasks_reopen
+      tags:
+      - Tasks
+      summary: Reopen a task that had been marked as complete.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-reopen
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksReopenRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /tasks.schedule:
+    post:
+      operationId: post_tasks_schedule
+      tags:
+      - Tasks
+      summary: Schedule a task in your calendar.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-schedule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksScheduleRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTasksScheduleResponse'
+  /tasks.update:
+    post:
+      operationId: post_tasks_update
+      tags:
+      - Tasks
+      summary: Update a task.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tasks-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTasksUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /ticketStatus.list:
+    post:
+      operationId: post_ticketStatus_list
+      tags:
+      - Ticketstatus
+      summary: Get a list of ticket statuses.
+      x-source: https://developer.focus.teamleader.eu/docs/api/ticket-status-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketstatusListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketstatusListResponse'
+  /tickets.addInternalMessage:
+    post:
+      operationId: post_tickets_addInternalMessage
+      tags:
+      - Tickets
+      summary: Adds an internal message to a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsAddinternalmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsAddinternalmessageResponse'
+  /tickets.addReply:
+    post:
+      operationId: post_tickets_addReply
+      tags:
+      - Tickets
+      summary: Adds a message to a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsAddreplyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsAddreplyResponse'
+  /tickets.create:
+    post:
+      operationId: post_tickets_create
+      tags:
+      - Tickets
+      summary: Create a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsCreateResponse'
+  /tickets.getMessage:
+    post:
+      operationId: post_tickets_getMessage
+      tags:
+      - Tickets
+      summary: Gets the ticket message.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsGetmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsGetmessageResponse'
+  /tickets.importMessage:
+    post:
+      operationId: post_tickets_importMessage
+      tags:
+      - Tickets
+      summary: Imports an existing message to a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsImportmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsImportmessageResponse'
+  /tickets.info:
+    post:
+      operationId: post_tickets_info
+      tags:
+      - Tickets
+      summary: Get details for a single ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsInfoResponse'
+  /tickets.list:
+    post:
+      operationId: post_tickets_list
+      tags:
+      - Tickets
+      summary: Get a list of tickets.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsListResponse'
+  /tickets.listMessages:
+    post:
+      operationId: post_tickets_listMessages
+      tags:
+      - Tickets
+      summary: Lists messages of a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsListmessagesRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsListmessagesResponse'
+  /tickets.update:
+    post:
+      operationId: post_tickets_update
+      tags:
+      - Tickets
+      summary: Update a ticket.
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /timers.update:
+    post:
+      operationId: post_timers_update
+      tags:
+      - Timers
+      summary: Update the current timer.
+      x-source: https://developer.focus.teamleader.eu/docs/api/timers-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTimersUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /userAvailability.daily:
+    post:
+      operationId: post_userAvailability_daily
+      tags:
+      - Useravailability
+      summary: Returns the daily availability for all users.
+      x-source: https://developer.focus.teamleader.eu/docs/api/user-availability-daily
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostUseravailabilityDailyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostUseravailabilityDailyResponse'
+components:
+  schemas:
+    PostContactsAddRequest:
+      type: object
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        emails:
+          type: object
+        salutation:
+          type: string
+        telephones:
+          type: object
+        website:
+          type: string
+        addresses:
+          type: object
+        language:
+          type: string
+        gender:
+          type: string
+        birthdate:
+          type: string
+        iban:
+          type: string
+        bic:
+          type: string
+        national_identification_number:
+          type: string
+        remarks:
+          type: string
+          description: This is the background information in Markdown
+        tags:
+          type: string
+        custom_fields:
+          type: object
+        marketing_mails_consent:
+          type: boolean
+        price_list_id:
+          type: string
+      required:
+      - first_name
+      - last_name
+    PostContactsAddResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostContactsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostContactsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsLinktocompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+        position:
+          type: string
+        decision_maker:
+          type: boolean
+      required:
+      - id
+      - company_id
+    PostContactsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+        includes:
+          type: string
+    PostContactsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsTagRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        tags:
+          type: string
+      required:
+      - id
+      - tags
+    PostContactsUnlinkfromcompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+      required:
+      - id
+      - company_id
+    PostContactsUntagRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        tags:
+          type: string
+      required:
+      - id
+      - tags
+    PostContactsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The contact ID to update
+        tags:
+          type: array
+          description: Array of tags for the contact
+        custom_fields:
+          type: array
+          description: Array of custom field objects with id and value
+        custom_fields_update_strategy:
+          type: string
+          description: Strategy for updating custom fields; use 'partial' for partial updates
+      required:
+      - id
+    PostContactsUpdateResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Resource type
+        id:
+          type: string
+          description: The ID of the updated contact
+    PostContactsUpdatecompanylinkRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+        position:
+          type: string
+        decision_maker:
+          type: boolean
+      required:
+      - id
+      - company_id
+    PostContactsUploadavatarRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        image:
+          type: string
+          description: Use null to remove the avatar
+      required:
+      - id
+      - image
+    PostDaysoffBulkdeleteRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          description: The id of the user that the days off belong to.
+        ids:
+          type: string
+          description: At least one day off id must be present.
+      required:
+      - user_id
+    PostDealsCreateRequest:
+      type: object
+      properties:
+        lead:
+          type: object
+        title:
+          type: string
+        summary:
+          type: string
+          description: This is the remarks field
+        source_id:
+          type: string
+        department_id:
+          type: string
+        responsible_user_id:
+          type: string
+        second_responsible_user_id:
+          type: string
+          description: This requires the second deal responsible feature to be enabled. Contact support.focus@teamleader.eu to enable it
+        phase_id:
+          type: string
+        estimated_value:
+          type: object
+        estimated_probability:
+          type: number
+          description: A number between 0 and 1 (inclusive)
+        estimated_closing_date:
+          type: string
+        custom_fields:
+          type: object
+        currency:
+          type: object
+        purchase_order_number:
+          type: string
+      required:
+      - lead
+      - title
+    PostDealsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostDealsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: Comma-separated list of optional includes
+      required:
+      - id
+    PostDealsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostDealsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsLoseRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        reason_id:
+          type: string
+        extra_info:
+          type: string
+      required:
+      - id
+    PostDealsMoveRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        phase_id:
+          type: string
+      required:
+      - id
+      - phase_id
+    PostDealsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        lead:
+          type: object
+        title:
+          type: string
+        summary:
+          type: string
+        source_id:
+          type: string
+        department_id:
+          type: string
+        responsible_user_id:
+          type: string
+        second_responsible_user_id:
+          type: string
+        estimated_value:
+          type: object
+        estimated_probability:
+          type: number
+        estimated_closing_date:
+          type: string
+        custom_fields:
+          type: object
+        currency:
+          type: object
+        purchase_order_number:
+          type: string
+      required:
+      - id
+    PostDealsWinRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostExpensesListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostExpensesListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+        meta:
+          type: object
+    PostFilesDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesDownloadRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesDownloadResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+      required:
+      - filter
+      - page
+    PostFilesListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesUploadRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name under which the file will be stored. This name should contain the same extension as the file that the user wants to
+            upload.
+        subject:
+          type: object
+        folder:
+          type: string
+          description: Name of a folder under which the file will be stored. Defaults to General in account's language if not passed.
+      required:
+      - name
+      - subject
+    PostFilesUploadResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesBookRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        'on':
+          type: string
+      required:
+      - id
+      - 'on'
+    PostInvoicesCopyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostInvoicesCopyResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostInvoicesDownloadRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        format:
+          type: string
+          description: 'Possible values: [pdf, ubl/e-fff, ubl/peppol_bis_3, ubl/xrechnung]'
+      required:
+      - id
+      - format
+    PostInvoicesDownloadResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesDraftRequest:
+      type: object
+      properties:
+        invoicee:
+          type: object
+        department_id:
+          type: string
+        payment_term:
+          type: object
+        currency:
+          type: object
+        project_id:
+          type: string
+        purchase_order_number:
+          type: string
+        quotation_id:
+          type: string
+          description: Links the created invoice to the source quotation and its deal, marking the deal as won.
+        grouped_lines:
+          type: object
+        invoice_date:
+          type: string
+        discounts:
+          type: object
+        note:
+          type: string
+          description: This is the remarks field
+        invoice_content:
+          type: string
+          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address
+            are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
+        expected_payment_method:
+          type: object
+        custom_fields:
+          type: object
+        document_template_id:
+          type: string
+        delivery_date:
+          type: string
+      required:
+      - invoicee
+      - department_id
+      - payment_term
+      - grouped_lines
+    PostInvoicesDraftResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: when used, the response will include totals.due_incasso_inclusive, totals.fixed_late_fee and totals.interest
+      required:
+      - id
+    PostInvoicesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesListRequest:
+      type: object
+      properties:
+        filter:
+          type: string
+          description: Filter object with department_id and other criteria
+        page:
+          type: string
+          description: Page object with size and number properties
+    PostInvoicesListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array of invoice objects
+        meta:
+          type: object
+          description: Pagination metadata including page and matches
+    PostInvoicesUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        invoicee:
+          type: object
+        payment_term:
+          type: object
+        currency:
+          type: object
+        project_id:
+          type: string
+        purchase_order_number:
+          type: string
+        grouped_lines:
+          type: object
+        invoice_date:
+          type: string
+        note:
+          type: string
+          description: This is the remarks field
+        invoice_content:
+          type: string
+          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address
+            are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
+        discounts:
+          type: object
+        expected_payment_method:
+          type: object
+        custom_fields:
+          type: object
+        document_template_id:
+          type: string
+        delivery_date:
+          type: string
+      required:
+      - id
+    PostInvoicesUpdatebookedRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        invoicee:
+          type: object
+        payment_term:
+          type: object
+        project_id:
+          type: string
+        grouped_lines:
+          type: object
+        invoice_date:
+          type: string
+        note:
+          type: string
+        invoice_content:
+          type: string
+          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address
+            are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
+        expected_payment_method:
+          type: object
+        custom_fields:
+          type: object
+      required:
+      - id
+    PostLeveltwoareasListRequest:
+      type: object
+      properties:
+        country:
+          type: string
+        language:
+          type: string
+          description: if not passed, the name is returned in the primary language of the country
+      required:
+      - country
+    PostLeveltwoareasListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostLostreasonsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostLostreasonsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostPaymentmethodsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+    PostPaymentmethodsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksCompleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksCreateRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        due_on:
+          type: string
+        work_type_id:
+          type: string
+        milestone_id:
+          type: string
+          description: Only available for users that have access to the old projects module
+        project_id:
+          type: string
+          description: Only available for users that have access to the new projects module
+        deal_id:
+          type: string
+        ticket_id:
+          type: string
+        estimated_duration:
+          type: object
+        assignee:
+          type: object
+        customer:
+          type: object
+        custom_fields:
+          type: object
+      required:
+      - title
+      - description
+      - work_type_id
+    PostTasksCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostTasksListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksReopenRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksScheduleRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        starts_at:
+          type: string
+        ends_at:
+          type: string
+      required:
+      - id
+      - starts_at
+      - ends_at
+    PostTasksScheduleResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        due_on:
+          type: string
+        work_type_id:
+          type: string
+        milestone_id:
+          type: string
+        project_id:
+          type: string
+        deal_id:
+          type: string
+        ticket_id:
+          type: string
+        estimated_duration:
+          type: object
+        assignee:
+          type: object
+        customer:
+          type: object
+        custom_fields:
+          type: object
+      required:
+      - id
+    PostTicketstatusListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+    PostTicketstatusListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsAddinternalmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+    PostTicketsAddinternalmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsAddreplyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+    PostTicketsAddreplyResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsCreateRequest:
+      type: object
+      properties:
+        subject:
+          type: string
+        customer:
+          type: object
+        ticket_status_id:
+          type: string
+        assignee:
+          type: object
+        custom_fields:
+          type: object
+        description:
+          type: string
+          description: Uses Markdown formatting
+        participant:
+          type: object
+        initial_reply:
+          type: string
+          description: 'Create & send an initial autoreply according to configuration (default: automatic). Possible values: [automatic, disabled]'
+        milestone_id:
+          type: string
+          description: Links the ticket to a milestone. Only applicable to accounts using legacy projects. A ticket can be linked to either a
+            milestone_id or a project_id, but not both.
+        project_id:
+          type: string
+          description: Links the ticket to a project. Only applicable to accounts using the new projects. A ticket can be linked to either a milestone_id
+            or a project_id, but not both.
+      required:
+      - subject
+      - customer
+      - ticket_status_id
+    PostTicketsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsGetmessageRequest:
+      type: object
+      properties:
+        message_id:
+          type: string
+      required:
+      - message_id
+    PostTicketsGetmessageResponse:
+      type: object
+      properties:
+        message_id:
+          type: string
+        body:
+          type: string
+        raw_body:
+          type: string
+        created_at:
+          type: string
+        sent_by:
+          type: object
+        ticket:
+          type: object
+        attachments:
+          type: object
+        type:
+          type: string
+    PostTicketsImportmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        sent_by:
+          type: object
+        sent_at:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+      - sent_by
+      - sent_at
+    PostTicketsImportmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTicketsInfoResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        reference:
+          type: number
+        subject:
+          type: string
+        status:
+          type: object
+        assignee:
+          type: object
+        created_at:
+          type: string
+        closed_at:
+          type: string
+        customer:
+          type: object
+        participant:
+          type: object
+        last_message_at:
+          type: string
+        description:
+          type: string
+        project:
+          type: object
+        milestone:
+          type: object
+        custom_fields:
+          type: object
+    PostTicketsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+    PostTicketsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsListmessagesRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        filter:
+          type: object
+        page:
+          type: object
+      required:
+      - id
+    PostTicketsListmessagesResponse:
+      type: object
+      properties:
+        data:
+          type: object
+        meta:
+          type: object
+    PostTicketsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        subject:
+          type: string
+        description:
+          type: string
+        ticket_status_id:
+          type: string
+        customer:
+          type: object
+        assignee:
+          type: object
+        participant:
+          type: object
+        custom_fields:
+          type: object
+        milestone_id:
+          type: string
+        project_id:
+          type: string
+      required:
+      - id
+    PostTimersUpdateRequest:
+      type: object
+      properties:
+        work_type_id:
+          type: string
+        started_at:
+          type: string
+        description:
+          type: string
+        subject:
+          type: object
+        invoiceable:
+          type: boolean
+      required:
+      - work_type_id
+    PostUseravailabilityDailyRequest:
+      type: object
+      properties:
+        period:
+          type: object
+        filter:
+          type: object
+        page:
+          type: object
+      required:
+      - period
+      - filter
+    PostUseravailabilityDailyResponse:
+      type: object
+      properties:
+        data:
+          type: object
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Contacts
+- name: Daysoff
+- name: Deals
+- name: Expenses
+- name: Files
+- name: Invoices
+- name: Leveltwoareas
+- name: Lostreasons
+- name: Paymentmethods
+- name: Tasks
+- name: Tickets
+- name: Ticketstatus
+- name: Timers
+- name: Useravailability

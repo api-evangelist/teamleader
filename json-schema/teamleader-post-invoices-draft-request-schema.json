@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-invoices-draft-request-schema.json",
+  "title": "PostInvoicesDraftRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostInvoicesDraftRequest",
+  "type": "object",
+  "properties": {
+    "invoicee": {
+      "type": "object"
+    },
+    "department_id": {
+      "type": "string"
+    },
+    "payment_term": {
+      "type": "object"
+    },
+    "currency": {
+      "type": "object"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "purchase_order_number": {
+      "type": "string"
+    },
+    "quotation_id": {
+      "type": "string",
+      "description": "Links the created invoice to the source quotation and its deal, marking the deal as won."
+    },
+    "grouped_lines": {
+      "type": "object"
+    },
+    "invoice_date": {
+      "type": "string"
+    },
+    "discounts": {
+      "type": "object"
+    },
+    "note": {
+      "type": "string",
+      "description": "This is the remarks field"
+    },
+    "invoice_content": {
+      "type": "string",
+      "description": "Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise."
+    },
+    "expected_payment_method": {
+      "type": "object"
+    },
+    "custom_fields": {
+      "type": "object"
+    },
+    "document_template_id": {
+      "type": "string"
+    },
+    "delivery_date": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "invoicee",
+    "department_id",
+    "payment_term",
+    "grouped_lines"
+  ]
+}

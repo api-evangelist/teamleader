@@ -1,0 +1,12 @@
+generated: '2026-09-22'
+method: derived
+source: openapi/teamleader-openapi-generated.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  sources:
+  - openapi/teamleader-openapi-generated.yml

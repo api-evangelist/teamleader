@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-deals-create-request-schema.json",
+  "title": "PostDealsCreateRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostDealsCreateRequest",
+  "type": "object",
+  "properties": {
+    "lead": {
+      "type": "object"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string",
+      "description": "This is the remarks field"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "department_id": {
+      "type": "string"
+    },
+    "responsible_user_id": {
+      "type": "string"
+    },
+    "second_responsible_user_id": {
+      "type": "string",
+      "description": "This requires the second deal responsible feature to be enabled. Contact support.focus@teamleader.eu to enable it"
+    },
+    "phase_id": {
+      "type": "string"
+    },
+    "estimated_value": {
+      "type": "object"
+    },
+    "estimated_probability": {
+      "type": "number",
+      "description": "A number between 0 and 1 (inclusive)"
+    },
+    "estimated_closing_date": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "object"
+    },
+    "currency": {
+      "type": "object"
+    },
+    "purchase_order_number": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "lead",
+    "title"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-tickets-create-request-schema.json",
+  "title": "PostTicketsCreateRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostTicketsCreateRequest",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "object"
+    },
+    "ticket_status_id": {
+      "type": "string"
+    },
+    "assignee": {
+      "type": "object"
+    },
+    "custom_fields": {
+      "type": "object"
+    },
+    "description": {
+      "type": "string",
+      "description": "Uses Markdown formatting"
+    },
+    "participant": {
+      "type": "object"
+    },
+    "initial_reply": {
+      "type": "string",
+      "description": "Create & send an initial autoreply according to configuration (default: automatic). Possible values: [automatic, disabled]"
+    },
+    "milestone_id": {
+      "type": "string",
+      "description": "Links the ticket to a milestone. Only applicable to accounts using legacy projects. A ticket can be linked to either a milestone_id or a project_id, but not both."
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Links the ticket to a project. Only applicable to accounts using the new projects. A ticket can be linked to either a milestone_id or a project_id, but not both."
+    }
+  },
+  "required": [
+    "subject",
+    "customer",
+    "ticket_status_id"
+  ]
+}

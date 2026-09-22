@@ -1,0 +1,117 @@
+openapi: 3.2.0
+info:
+  title: Teamleader Paymentmethods API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 58 operation(s) read from 60 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Teamleader has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://developer.focus.teamleader.eu/docs/authentication
+  - https://developer.focus.teamleader.eu/docs/general-principles
+  - https://developer.focus.teamleader.eu/docs/api/deals-list
+  - https://developer.focus.teamleader.eu/docs/api/deals-info
+  - https://developer.focus.teamleader.eu/docs/api/deals-create
+  - https://developer.focus.teamleader.eu/docs/api/deals-update
+  - https://developer.focus.teamleader.eu/docs/api/deals-move
+  - https://developer.focus.teamleader.eu/docs/api/deals-win
+  - https://developer.focus.teamleader.eu/docs/api/deals-lose
+  - https://developer.focus.teamleader.eu/docs/api/deals-delete
+  - https://developer.focus.teamleader.eu/docs/api/lost-reasons-list
+  - https://developer.focus.teamleader.eu/docs/api/level-two-areas-list
+  - https://developer.focus.teamleader.eu/docs/api/files-list
+  - https://developer.focus.teamleader.eu/docs/api/files-info
+  - https://developer.focus.teamleader.eu/docs/api/files-download
+  - https://developer.focus.teamleader.eu/docs/api/files-upload
+  - https://developer.focus.teamleader.eu/docs/api/files-delete
+  - https://developer.focus.teamleader.eu/docs/api/ticket-status-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-info
+  - https://developer.focus.teamleader.eu/docs/api/tasks-create
+  - https://developer.focus.teamleader.eu/docs/api/tasks-update
+  - https://developer.focus.teamleader.eu/docs/api/tasks-complete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-reopen
+  - https://developer.focus.teamleader.eu/docs/api/tasks-delete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-schedule
+  - https://developer.focus.teamleader.eu/docs/api/user-availability-daily
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list
+  - https://developer.focus.teamleader.eu/docs/api/tickets-info
+  - https://developer.focus.teamleader.eu/docs/api/tickets-create
+  - https://developer.focus.teamleader.eu/docs/api/tickets-update
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+  - https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+  - https://developer.focus.teamleader.eu/docs/api/timers-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-list
+  - https://developer.focus.teamleader.eu/docs/api/contacts-info
+  - https://developer.focus.teamleader.eu/docs/api/contacts-add
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-delete
+  - https://developer.focus.teamleader.eu/docs/api/contacts-tag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-untag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-link-to-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-unlink-from-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update-company-link
+  - https://developer.focus.teamleader.eu/docs/api/contacts-upload-avatar
+  - https://developer.focus.teamleader.eu/docs/api/days-off-bulk-delete
+  - https://developer.focus.teamleader.eu/docs/api/expenses-list
+  - https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-info
+  - https://developer.focus.teamleader.eu/docs/api/invoices-download
+  - https://developer.focus.teamleader.eu/docs/api/invoices-draft
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update-booked
+  - https://developer.focus.teamleader.eu/docs/api/invoices-copy
+  - https://developer.focus.teamleader.eu/docs/api/invoices-book
+  - https://developer.focus.teamleader.eu/docs/api/invoices-delete
+servers:
+- url: https://api.focus.teamleader.eu
+security:
+- bearer: []
+tags:
+- name: Payment Methods
+paths:
+  /paymentMethods.list:
+    post:
+      operationId: post_paymentMethods_list
+      tags:
+      - Payment Methods
+      summary: Get a list of payment methods
+      x-source: https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPaymentmethodsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPaymentmethodsListResponse'
+components:
+  schemas:
+    PostPaymentmethodsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+    PostPaymentmethodsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,40 +1,53 @@
 aid: teamleader
-
 name: Teamleader
-
 image: https://cdn.craft.cloud/019c94d2-1a0c-72a9-9aeb-fca40a9cddd3/assets/general/SEO-images/Teamleader-SEO.jpg?fit=cover&height=630&width=1200&s=qRou8Ix0kelrG98e5NrDsPf-6SZBB_wNOxzMj9zJnug
-
-description: 'Teamleader provides an integrated CRM, invoicing, quotations, and project management platform for SMEs. Its Focus product offers a unified workspace to manage customers, sales, finances, and projects, with a marketplace for extensions and robust API access for developers.'
-
+description: Teamleader provides an integrated CRM, invoicing, quotations, and project management platform for SMEs. Its Focus product offers
+  a unified workspace to manage customers, sales, finances, and projects, with a marketplace for extensions and robust API access for developers.
 url: https://raw.githubusercontent.com/api-evangelist/teamleader/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:crm
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-21'
-
 modified: '2026-09-21'
-
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-21
 tags:
+- CRM
+- Invoicing
+- Project Management
+- Software-as-a-Service
+- SME
+tags_raw:
 - CRM
 - Invoicing
 - Project Management
 - SaaS
 - SME
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: AgenticAccess
+  url: agentic-access/teamleader-agentic-access.yml
+- type: Spectral
+  url: rules/teamleader-rules.yml
+- type: JSONLD
+  url: json-ld/teamleader-context.jsonld
+- type: Vocabulary
+  url: vocabulary/teamleader-vocabulary.yml
+- type: DataModel
+  url: data-model/teamleader-data-model.yml
+- type: Conformance
+  url: conformance/teamleader-conformance.yml
+- type: Leadership
+  url: https://www.teamleader.eu/about/team
+- type: Authentication
+  url: authentication/teamleader-authentication.yml
 - type: SecurityTxt
   url: well-known/teamleader-status-security.txt
 - type: WellKnown
@@ -83,16 +96,322 @@ common:
   url: https://www.teamleader.eu/legal/privacy-statement
 - type: SignUp
   url: https://signup.focus.teamleader.eu/
-
-apis: []
-
+apis:
+- aid: teamleader:teamleader-contacts-api
+  name: Teamleader Contacts API
+  description: The Contacts API from Teamleader — 11 operation(s) for contacts.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-contacts-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-daysoff-api
+  name: Teamleader Daysoff API
+  description: The Daysoff API from Teamleader — 1 operation(s) for daysoff.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Daysoff
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-daysoff-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-deals-api
+  name: Teamleader Deals API
+  description: The Deals API from Teamleader — 8 operation(s) for deals.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Deals
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-deals-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-expenses-api
+  name: Teamleader Expenses API
+  description: The Expenses API from Teamleader — 1 operation(s) for expenses.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Expenses
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-expenses-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-files-api
+  name: Teamleader Files API
+  description: The Files API from Teamleader — 5 operation(s) for files.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-files-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-invoices-api
+  name: Teamleader Invoices API
+  description: The Invoices API from Teamleader — 9 operation(s) for invoices.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-invoices-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-leveltwoareas-api
+  name: Teamleader Leveltwoareas API
+  description: The Leveltwoareas API from Teamleader — 1 operation(s) for leveltwoareas.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Leveltwoareas
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-leveltwoareas-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-lostreasons-api
+  name: Teamleader Lostreasons API
+  description: The Lostreasons API from Teamleader — 1 operation(s) for lostreasons.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Lostreasons
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-lostreasons-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-tasks-api
+  name: Teamleader Tasks API
+  description: The Tasks API from Teamleader — 8 operation(s) for tasks.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-tasks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-tickets-api
+  name: Teamleader Tickets API
+  description: The Tickets API from Teamleader — 9 operation(s) for tickets.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-tickets-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-ticketstatus-api
+  name: Teamleader Ticketstatus API
+  description: The Ticketstatus API from Teamleader — 1 operation(s) for ticketstatus.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Ticketstatus
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-ticketstatus-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-timers-api
+  name: Teamleader Timers API
+  description: The Timers API from Teamleader — 1 operation(s) for timers.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Timers
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-timers-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-useravailability-api
+  name: Teamleader Useravailability API
+  description: The Useravailability API from Teamleader — 1 operation(s) for useravailability.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Useravailability
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-useravailability-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
+- aid: teamleader:teamleader-payment-methods-api
+  name: Teamleader Payment Methods API
+  description: The Payment Methods API from Teamleader — 1 operation(s) for payment methods.
+  humanURL: https://developer.focus.teamleader.eu/docs/authentication
+  baseURL: https://api.focus.teamleader.eu
+  tags:
+  - Payment Methods
+  properties:
+  - type: OpenAPI
+    url: openapi/teamleader-payment-methods-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-draft-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tickets-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-invoices-update-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-deals-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-contacts-add-request-schema.json
+  - type: JSONSchema
+    url: json-schema/teamleader-post-tasks-create-request-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
   detail: Developer docs provide markdown but no OpenAPI or other machine-readable contract was found.
   evidence:
-    - url: https://api.teamleader.eu/openapi.json
-      status: 404
+  - url: https://api.teamleader.eu/openapi.json
+    status: 404
   checked: 2026-09-21
 x-enrichment:
   date: '2026-09-21'

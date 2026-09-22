@@ -1,9 +1,228 @@
-generated: 2026-09-21
-method: none
+generated: '2026-09-22'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/teamleader-contacts-api-openapi.yml
+- openapi/teamleader-daysoff-api-openapi.yml
+- openapi/teamleader-deals-api-openapi.yml
+- openapi/teamleader-expenses-api-openapi.yml
+- openapi/teamleader-files-api-openapi.yml
+- openapi/teamleader-invoices-api-openapi.yml
+- openapi/teamleader-leveltwoareas-api-openapi.yml
+- openapi/teamleader-lostreasons-api-openapi.yml
+- openapi/teamleader-payment-methods-api-openapi.yml
+- openapi/teamleader-tasks-api-openapi.yml
+- openapi/teamleader-tickets-api-openapi.yml
+- openapi/teamleader-ticketstatus-api-openapi.yml
+- openapi/teamleader-timers-api-openapi.yml
+- openapi/teamleader-useravailability-api-openapi.yml
+status: candidate
 deployment:
   mode: none
-  endpoint: null
-  install: null
-  package: null
   auth: unknown
-  verified: derived
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.teamleader.eu, www.teamleader.eu, status.teamleader.eu, developer.focus.teamleader.eu;
+  verdict opaque (https://status.teamleader.eu/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 58 operation(s) in the provider''s own OpenAPI (40 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: post_contacts_add
+  operationId: post_contacts_add
+  method: POST
+  path: /contacts.add
+  description: Add a new contact
+- name: post_days_off_bulk_delete
+  operationId: post_daysOff_bulkDelete
+  method: POST
+  path: /daysOff.bulkDelete
+  description: Deletes a list of days off for the given user
+- name: post_deals_create
+  operationId: post_deals_create
+  method: POST
+  path: /deals.create
+  description: Create a new deal for a customer
+- name: post_expenses_list
+  operationId: post_expenses_list
+  method: POST
+  path: /expenses.list
+  description: Get a list of all expenses
+- name: post_files_delete
+  operationId: post_files_delete
+  method: POST
+  path: /files.delete
+  description: Delete a file
+- name: post_invoices_book
+  operationId: post_invoices_book
+  method: POST
+  path: /invoices.book
+  description: Book a draft invoice
+- name: post_level_two_areas_list
+  operationId: post_levelTwoAreas_list
+  method: POST
+  path: /levelTwoAreas.list
+  description: Get a list of level two areas (which correspond to provinces, departments or…
+- name: post_lost_reasons_list
+  operationId: post_lostReasons_list
+  method: POST
+  path: /lostReasons.list
+  description: Get a list of lost reasons for deals
+- name: post_payment_methods_list
+  operationId: post_paymentMethods_list
+  method: POST
+  path: /paymentMethods.list
+  description: Get a list of payment methods
+- name: post_tasks_complete
+  operationId: post_tasks_complete
+  method: POST
+  path: /tasks.complete
+  description: Mark a task as complete
+- name: post_tickets_add_internal_message
+  operationId: post_tickets_addInternalMessage
+  method: POST
+  path: /tickets.addInternalMessage
+  description: Adds an internal message to a ticket
+- name: post_ticket_status_list
+  operationId: post_ticketStatus_list
+  method: POST
+  path: /ticketStatus.list
+  description: Get a list of ticket statuses
+- name: post_timers_update
+  operationId: post_timers_update
+  method: POST
+  path: /timers.update
+  description: Update the current timer
+- name: post_user_availability_daily
+  operationId: post_userAvailability_daily
+  method: POST
+  path: /userAvailability.daily
+  description: Returns the daily availability for all users
+- name: post_contacts_delete
+  operationId: post_contacts_delete
+  method: POST
+  path: /contacts.delete
+  description: Delete a contact
+- name: post_deals_delete
+  operationId: post_deals_delete
+  method: POST
+  path: /deals.delete
+  description: Delete a deal
+- name: post_files_download
+  operationId: post_files_download
+  method: POST
+  path: /files.download
+  description: Request the download link for a file
+- name: post_invoices_copy
+  operationId: post_invoices_copy
+  method: POST
+  path: /invoices.copy
+  description: Creates a new draft invoice based on another invoice
+- name: post_tasks_create
+  operationId: post_tasks_create
+  method: POST
+  path: /tasks.create
+  description: Create a new task
+- name: post_tickets_add_reply
+  operationId: post_tickets_addReply
+  method: POST
+  path: /tickets.addReply
+  description: Adds a message to a ticket
+- name: post_contacts_info
+  operationId: post_contacts_info
+  method: POST
+  path: /contacts.info
+  description: Get details for a single contact
+- name: post_deals_info
+  operationId: post_deals_info
+  method: POST
+  path: /deals.info
+  description: Get details for a single deal
+- name: post_files_info
+  operationId: post_files_info
+  method: POST
+  path: /files.info
+  description: Get details for a single file
+- name: post_invoices_delete
+  operationId: post_invoices_delete
+  method: POST
+  path: /invoices.delete
+  description: Delete an existing invoice
+- name: post_tasks_delete
+  operationId: post_tasks_delete
+  method: POST
+  path: /tasks.delete
+  description: Delete a task
+- name: post_tickets_create
+  operationId: post_tickets_create
+  method: POST
+  path: /tickets.create
+  description: Create a ticket
+- name: post_contacts_link_to_company
+  operationId: post_contacts_linkToCompany
+  method: POST
+  path: /contacts.linkToCompany
+  description: Link a contact to a company
+- name: post_deals_list
+  operationId: post_deals_list
+  method: POST
+  path: /deals.list
+  description: Get a list of deals
+- name: post_files_list
+  operationId: post_files_list
+  method: POST
+  path: /files.list
+  description: Get a list of files
+- name: post_invoices_download
+  operationId: post_invoices_download
+  method: POST
+  path: /invoices.download
+  description: Download an invoice in a specific format
+- name: post_tasks_info
+  operationId: post_tasks_info
+  method: POST
+  path: /tasks.info
+  description: Get information about a task
+- name: post_tickets_get_message
+  operationId: post_tickets_getMessage
+  method: POST
+  path: /tickets.getMessage
+  description: Gets the ticket message
+- name: post_contacts_list
+  operationId: post_contacts_list
+  method: POST
+  path: /contacts.list
+  description: Get a list of contacts
+- name: post_deals_lose
+  operationId: post_deals_lose
+  method: POST
+  path: /deals.lose
+  description: Mark a deal as lost
+- name: post_files_upload
+  operationId: post_files_upload
+  method: POST
+  path: /files.upload
+  description: Request the upload link for a file
+- name: post_invoices_draft
+  operationId: post_invoices_draft
+  method: POST
+  path: /invoices.draft
+  description: Draft a new invoice
+- name: post_tasks_list
+  operationId: post_tasks_list
+  method: POST
+  path: /tasks.list
+  description: Get a list of tasks
+- name: post_tickets_import_message
+  operationId: post_tickets_importMessage
+  method: POST
+  path: /tickets.importMessage
+  description: Imports an existing message to a ticket
+- name: post_contacts_tag
+  operationId: post_contacts_tag
+  method: POST
+  path: /contacts.tag
+  description: Add a new or existing tag to a contact
+- name: post_deals_move
+  operationId: post_deals_move
+  method: POST
+  path: /deals.move
+  description: Move the deal to a different phase

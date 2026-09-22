@@ -1,0 +1,468 @@
+{
+  "@context": {
+    "@vocab": "https://teamleader.eu/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "teamleader": "https://teamleader.eu/schema#",
+    "PostContactsAddRequest": "teamleader:PostContactsAddRequest",
+    "first_name": {
+      "@id": "teamleader:first_name",
+      "@type": "xsd:string"
+    },
+    "last_name": {
+      "@id": "teamleader:last_name",
+      "@type": "xsd:string"
+    },
+    "emails": {
+      "@id": "teamleader:emails"
+    },
+    "salutation": {
+      "@id": "teamleader:salutation",
+      "@type": "xsd:string"
+    },
+    "telephones": {
+      "@id": "teamleader:telephones"
+    },
+    "website": {
+      "@id": "teamleader:website",
+      "@type": "xsd:string"
+    },
+    "addresses": {
+      "@id": "teamleader:addresses"
+    },
+    "language": {
+      "@id": "teamleader:language",
+      "@type": "xsd:string"
+    },
+    "gender": {
+      "@id": "teamleader:gender",
+      "@type": "xsd:string"
+    },
+    "birthdate": {
+      "@id": "teamleader:birthdate",
+      "@type": "xsd:string"
+    },
+    "iban": {
+      "@id": "teamleader:iban",
+      "@type": "xsd:string"
+    },
+    "bic": {
+      "@id": "teamleader:bic",
+      "@type": "xsd:string"
+    },
+    "national_identification_number": {
+      "@id": "teamleader:national_identification_number",
+      "@type": "xsd:string"
+    },
+    "remarks": {
+      "@id": "teamleader:remarks",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "teamleader:tags",
+      "@type": "xsd:string"
+    },
+    "custom_fields": {
+      "@id": "teamleader:custom_fields"
+    },
+    "marketing_mails_consent": {
+      "@id": "teamleader:marketing_mails_consent",
+      "@type": "xsd:boolean"
+    },
+    "price_list_id": {
+      "@id": "teamleader:price_list_id",
+      "@type": "xsd:string"
+    },
+    "PostContactsAddResponse": "teamleader:PostContactsAddResponse",
+    "data": {
+      "@id": "teamleader:data"
+    },
+    "PostContactsDeleteRequest": "teamleader:PostContactsDeleteRequest",
+    "id": {
+      "@id": "teamleader:id",
+      "@type": "xsd:string"
+    },
+    "PostContactsInfoRequest": "teamleader:PostContactsInfoRequest",
+    "PostContactsInfoResponse": "teamleader:PostContactsInfoResponse",
+    "PostContactsLinktocompanyRequest": "teamleader:PostContactsLinktocompanyRequest",
+    "company_id": {
+      "@id": "teamleader:company_id",
+      "@type": "xsd:string"
+    },
+    "position": {
+      "@id": "teamleader:position",
+      "@type": "xsd:string"
+    },
+    "decision_maker": {
+      "@id": "teamleader:decision_maker",
+      "@type": "xsd:boolean"
+    },
+    "PostContactsListRequest": "teamleader:PostContactsListRequest",
+    "filter": {
+      "@id": "teamleader:filter"
+    },
+    "page": {
+      "@id": "teamleader:page"
+    },
+    "sort": {
+      "@id": "teamleader:sort"
+    },
+    "includes": {
+      "@id": "teamleader:includes",
+      "@type": "xsd:string"
+    },
+    "PostContactsListResponse": "teamleader:PostContactsListResponse",
+    "PostContactsTagRequest": "teamleader:PostContactsTagRequest",
+    "PostContactsUnlinkfromcompanyRequest": "teamleader:PostContactsUnlinkfromcompanyRequest",
+    "PostContactsUntagRequest": "teamleader:PostContactsUntagRequest",
+    "PostContactsUpdateRequest": "teamleader:PostContactsUpdateRequest",
+    "custom_fields_update_strategy": {
+      "@id": "teamleader:custom_fields_update_strategy",
+      "@type": "xsd:string"
+    },
+    "PostContactsUpdateResponse": "teamleader:PostContactsUpdateResponse",
+    "type": {
+      "@id": "teamleader:type",
+      "@type": "xsd:string"
+    },
+    "PostContactsUpdatecompanylinkRequest": "teamleader:PostContactsUpdatecompanylinkRequest",
+    "PostContactsUploadavatarRequest": "teamleader:PostContactsUploadavatarRequest",
+    "image": {
+      "@id": "teamleader:image",
+      "@type": "xsd:string"
+    },
+    "PostDaysoffBulkdeleteRequest": "teamleader:PostDaysoffBulkdeleteRequest",
+    "user_id": {
+      "@id": "teamleader:user_id",
+      "@type": "xsd:string"
+    },
+    "ids": {
+      "@id": "teamleader:ids",
+      "@type": "xsd:string"
+    },
+    "PostDealsCreateRequest": "teamleader:PostDealsCreateRequest",
+    "lead": {
+      "@id": "teamleader:lead"
+    },
+    "title": {
+      "@id": "teamleader:title",
+      "@type": "xsd:string"
+    },
+    "summary": {
+      "@id": "teamleader:summary",
+      "@type": "xsd:string"
+    },
+    "source_id": {
+      "@id": "teamleader:source_id",
+      "@type": "xsd:string"
+    },
+    "department_id": {
+      "@id": "teamleader:department_id",
+      "@type": "xsd:string"
+    },
+    "responsible_user_id": {
+      "@id": "teamleader:responsible_user_id",
+      "@type": "xsd:string"
+    },
+    "second_responsible_user_id": {
+      "@id": "teamleader:second_responsible_user_id",
+      "@type": "xsd:string"
+    },
+    "phase_id": {
+      "@id": "teamleader:phase_id",
+      "@type": "xsd:string"
+    },
+    "estimated_value": {
+      "@id": "teamleader:estimated_value"
+    },
+    "estimated_probability": {
+      "@id": "teamleader:estimated_probability",
+      "@type": "xsd:decimal"
+    },
+    "estimated_closing_date": {
+      "@id": "teamleader:estimated_closing_date",
+      "@type": "xsd:string"
+    },
+    "currency": {
+      "@id": "teamleader:currency"
+    },
+    "purchase_order_number": {
+      "@id": "teamleader:purchase_order_number",
+      "@type": "xsd:string"
+    },
+    "PostDealsCreateResponse": "teamleader:PostDealsCreateResponse",
+    "PostDealsDeleteRequest": "teamleader:PostDealsDeleteRequest",
+    "PostDealsInfoRequest": "teamleader:PostDealsInfoRequest",
+    "PostDealsInfoResponse": "teamleader:PostDealsInfoResponse",
+    "PostDealsListRequest": "teamleader:PostDealsListRequest",
+    "PostDealsListResponse": "teamleader:PostDealsListResponse",
+    "PostDealsLoseRequest": "teamleader:PostDealsLoseRequest",
+    "reason_id": {
+      "@id": "teamleader:reason_id",
+      "@type": "xsd:string"
+    },
+    "extra_info": {
+      "@id": "teamleader:extra_info",
+      "@type": "xsd:string"
+    },
+    "PostDealsMoveRequest": "teamleader:PostDealsMoveRequest",
+    "PostDealsUpdateRequest": "teamleader:PostDealsUpdateRequest",
+    "PostDealsWinRequest": "teamleader:PostDealsWinRequest",
+    "PostExpensesListRequest": "teamleader:PostExpensesListRequest",
+    "PostExpensesListResponse": "teamleader:PostExpensesListResponse",
+    "meta": {
+      "@id": "teamleader:meta"
+    },
+    "PostFilesDeleteRequest": "teamleader:PostFilesDeleteRequest",
+    "PostFilesDownloadRequest": "teamleader:PostFilesDownloadRequest",
+    "PostFilesDownloadResponse": "teamleader:PostFilesDownloadResponse",
+    "PostFilesInfoRequest": "teamleader:PostFilesInfoRequest",
+    "PostFilesInfoResponse": "teamleader:PostFilesInfoResponse",
+    "PostFilesListRequest": "teamleader:PostFilesListRequest",
+    "PostFilesListResponse": "teamleader:PostFilesListResponse",
+    "PostFilesUploadRequest": "teamleader:PostFilesUploadRequest",
+    "name": {
+      "@id": "teamleader:name",
+      "@type": "xsd:string"
+    },
+    "subject": {
+      "@id": "teamleader:subject"
+    },
+    "folder": {
+      "@id": "teamleader:folder",
+      "@type": "xsd:string"
+    },
+    "PostFilesUploadResponse": "teamleader:PostFilesUploadResponse",
+    "PostInvoicesBookRequest": "teamleader:PostInvoicesBookRequest",
+    "on": {
+      "@id": "teamleader:on",
+      "@type": "xsd:string"
+    },
+    "PostInvoicesCopyRequest": "teamleader:PostInvoicesCopyRequest",
+    "PostInvoicesCopyResponse": "teamleader:PostInvoicesCopyResponse",
+    "PostInvoicesDeleteRequest": "teamleader:PostInvoicesDeleteRequest",
+    "PostInvoicesDownloadRequest": "teamleader:PostInvoicesDownloadRequest",
+    "format": {
+      "@id": "teamleader:format",
+      "@type": "xsd:string"
+    },
+    "PostInvoicesDownloadResponse": "teamleader:PostInvoicesDownloadResponse",
+    "PostInvoicesDraftRequest": "teamleader:PostInvoicesDraftRequest",
+    "invoicee": {
+      "@id": "teamleader:invoicee"
+    },
+    "payment_term": {
+      "@id": "teamleader:payment_term"
+    },
+    "project_id": {
+      "@id": "teamleader:project_id",
+      "@type": "xsd:string"
+    },
+    "quotation_id": {
+      "@id": "teamleader:quotation_id",
+      "@type": "xsd:string"
+    },
+    "grouped_lines": {
+      "@id": "teamleader:grouped_lines"
+    },
+    "invoice_date": {
+      "@id": "teamleader:invoice_date",
+      "@type": "xsd:string"
+    },
+    "discounts": {
+      "@id": "teamleader:discounts"
+    },
+    "note": {
+      "@id": "teamleader:note",
+      "@type": "xsd:string"
+    },
+    "invoice_content": {
+      "@id": "teamleader:invoice_content",
+      "@type": "xsd:string"
+    },
+    "expected_payment_method": {
+      "@id": "teamleader:expected_payment_method"
+    },
+    "document_template_id": {
+      "@id": "teamleader:document_template_id",
+      "@type": "xsd:string"
+    },
+    "delivery_date": {
+      "@id": "teamleader:delivery_date",
+      "@type": "xsd:string"
+    },
+    "PostInvoicesDraftResponse": "teamleader:PostInvoicesDraftResponse",
+    "PostInvoicesInfoRequest": "teamleader:PostInvoicesInfoRequest",
+    "PostInvoicesInfoResponse": "teamleader:PostInvoicesInfoResponse",
+    "PostInvoicesListRequest": "teamleader:PostInvoicesListRequest",
+    "PostInvoicesListResponse": "teamleader:PostInvoicesListResponse",
+    "PostInvoicesUpdateRequest": "teamleader:PostInvoicesUpdateRequest",
+    "PostInvoicesUpdatebookedRequest": "teamleader:PostInvoicesUpdatebookedRequest",
+    "PostLeveltwoareasListRequest": "teamleader:PostLeveltwoareasListRequest",
+    "country": {
+      "@id": "teamleader:country",
+      "@type": "xsd:string"
+    },
+    "PostLeveltwoareasListResponse": "teamleader:PostLeveltwoareasListResponse",
+    "PostLostreasonsListRequest": "teamleader:PostLostreasonsListRequest",
+    "PostLostreasonsListResponse": "teamleader:PostLostreasonsListResponse",
+    "PostPaymentmethodsListRequest": "teamleader:PostPaymentmethodsListRequest",
+    "PostPaymentmethodsListResponse": "teamleader:PostPaymentmethodsListResponse",
+    "PostTasksCompleteRequest": "teamleader:PostTasksCompleteRequest",
+    "PostTasksCreateRequest": "teamleader:PostTasksCreateRequest",
+    "description": {
+      "@id": "teamleader:description",
+      "@type": "xsd:string"
+    },
+    "due_on": {
+      "@id": "teamleader:due_on",
+      "@type": "xsd:string"
+    },
+    "work_type_id": {
+      "@id": "teamleader:work_type_id",
+      "@type": "xsd:string"
+    },
+    "milestone_id": {
+      "@id": "teamleader:milestone_id",
+      "@type": "xsd:string"
+    },
+    "deal_id": {
+      "@id": "teamleader:deal_id",
+      "@type": "xsd:string"
+    },
+    "ticket_id": {
+      "@id": "teamleader:ticket_id",
+      "@type": "xsd:string"
+    },
+    "estimated_duration": {
+      "@id": "teamleader:estimated_duration"
+    },
+    "assignee": {
+      "@id": "teamleader:assignee"
+    },
+    "customer": {
+      "@id": "teamleader:customer"
+    },
+    "PostTasksCreateResponse": "teamleader:PostTasksCreateResponse",
+    "PostTasksDeleteRequest": "teamleader:PostTasksDeleteRequest",
+    "PostTasksInfoRequest": "teamleader:PostTasksInfoRequest",
+    "PostTasksInfoResponse": "teamleader:PostTasksInfoResponse",
+    "PostTasksListRequest": "teamleader:PostTasksListRequest",
+    "PostTasksListResponse": "teamleader:PostTasksListResponse",
+    "PostTasksReopenRequest": "teamleader:PostTasksReopenRequest",
+    "PostTasksScheduleRequest": "teamleader:PostTasksScheduleRequest",
+    "starts_at": {
+      "@id": "teamleader:starts_at",
+      "@type": "xsd:string"
+    },
+    "ends_at": {
+      "@id": "teamleader:ends_at",
+      "@type": "xsd:string"
+    },
+    "PostTasksScheduleResponse": "teamleader:PostTasksScheduleResponse",
+    "PostTasksUpdateRequest": "teamleader:PostTasksUpdateRequest",
+    "PostTicketstatusListRequest": "teamleader:PostTicketstatusListRequest",
+    "PostTicketstatusListResponse": "teamleader:PostTicketstatusListResponse",
+    "PostTicketsAddinternalmessageRequest": "teamleader:PostTicketsAddinternalmessageRequest",
+    "body": {
+      "@id": "teamleader:body",
+      "@type": "xsd:string"
+    },
+    "ticket_status_id": {
+      "@id": "teamleader:ticket_status_id",
+      "@type": "xsd:string"
+    },
+    "attachments": {
+      "@id": "teamleader:attachments",
+      "@type": "xsd:string"
+    },
+    "PostTicketsAddinternalmessageResponse": "teamleader:PostTicketsAddinternalmessageResponse",
+    "PostTicketsAddreplyRequest": "teamleader:PostTicketsAddreplyRequest",
+    "PostTicketsAddreplyResponse": "teamleader:PostTicketsAddreplyResponse",
+    "PostTicketsCreateRequest": "teamleader:PostTicketsCreateRequest",
+    "participant": {
+      "@id": "teamleader:participant"
+    },
+    "initial_reply": {
+      "@id": "teamleader:initial_reply",
+      "@type": "xsd:string"
+    },
+    "PostTicketsCreateResponse": "teamleader:PostTicketsCreateResponse",
+    "PostTicketsGetmessageRequest": "teamleader:PostTicketsGetmessageRequest",
+    "message_id": {
+      "@id": "teamleader:message_id",
+      "@type": "xsd:string"
+    },
+    "PostTicketsGetmessageResponse": "teamleader:PostTicketsGetmessageResponse",
+    "raw_body": {
+      "@id": "teamleader:raw_body",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "teamleader:created_at",
+      "@type": "xsd:string"
+    },
+    "sent_by": {
+      "@id": "teamleader:sent_by"
+    },
+    "ticket": {
+      "@id": "teamleader:ticket"
+    },
+    "PostTicketsImportmessageRequest": "teamleader:PostTicketsImportmessageRequest",
+    "sent_at": {
+      "@id": "teamleader:sent_at",
+      "@type": "xsd:string"
+    },
+    "PostTicketsImportmessageResponse": "teamleader:PostTicketsImportmessageResponse",
+    "PostTicketsInfoRequest": "teamleader:PostTicketsInfoRequest",
+    "PostTicketsInfoResponse": "teamleader:PostTicketsInfoResponse",
+    "reference": {
+      "@id": "teamleader:reference",
+      "@type": "xsd:decimal"
+    },
+    "status": {
+      "@id": "teamleader:status"
+    },
+    "closed_at": {
+      "@id": "teamleader:closed_at",
+      "@type": "xsd:string"
+    },
+    "last_message_at": {
+      "@id": "teamleader:last_message_at",
+      "@type": "xsd:string"
+    },
+    "project": {
+      "@id": "teamleader:project"
+    },
+    "milestone": {
+      "@id": "teamleader:milestone"
+    },
+    "PostTicketsListRequest": "teamleader:PostTicketsListRequest",
+    "PostTicketsListResponse": "teamleader:PostTicketsListResponse",
+    "PostTicketsListmessagesRequest": "teamleader:PostTicketsListmessagesRequest",
+    "PostTicketsListmessagesResponse": "teamleader:PostTicketsListmessagesResponse",
+    "PostTicketsUpdateRequest": "teamleader:PostTicketsUpdateRequest",
+    "PostTimersUpdateRequest": "teamleader:PostTimersUpdateRequest",
+    "started_at": {
+      "@id": "teamleader:started_at",
+      "@type": "xsd:string"
+    },
+    "invoiceable": {
+      "@id": "teamleader:invoiceable",
+      "@type": "xsd:boolean"
+    },
+    "PostUseravailabilityDailyRequest": "teamleader:PostUseravailabilityDailyRequest",
+    "period": {
+      "@id": "teamleader:period"
+    },
+    "PostUseravailabilityDailyResponse": "teamleader:PostUseravailabilityDailyResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Teamleader API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Teamleader's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/teamleader-openapi-generated.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/teamleader-openapi-generated.yml"
+  ]
+}

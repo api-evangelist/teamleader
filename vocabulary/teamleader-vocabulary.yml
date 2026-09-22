@@ -1,0 +1,426 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/teamleader-contacts-api-openapi.yml
+- openapi/teamleader-daysoff-api-openapi.yml
+- openapi/teamleader-deals-api-openapi.yml
+- openapi/teamleader-expenses-api-openapi.yml
+- openapi/teamleader-files-api-openapi.yml
+vocabulary:
+  name: Teamleader Domain Vocabulary
+  description: 'Terms declared by Teamleader''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-22'
+  terms:
+  - term: PostContactsListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort, includes.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsListRequest
+  - term: PostContactsUnlinkfromcompanyRequest
+    definition: 'Object declared by the contract with fields: id, company_id.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUnlinkfromcompanyRequest
+  - term: PostContactsInfoResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsInfoResponse
+  - term: PostContactsListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsListResponse
+  - term: PostContactsTagRequest
+    definition: 'Object declared by the contract with fields: id, tags.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsTagRequest
+  - term: PostContactsUpdatecompanylinkRequest
+    definition: 'Object declared by the contract with fields: id, company_id, position, decision_maker.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUpdatecompanylinkRequest
+  - term: PostContactsUpdateRequest
+    definition: 'Object declared by the contract with fields: id, tags, custom_fields, custom_fields_update_strategy.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUpdateRequest
+  - term: PostContactsAddResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsAddResponse
+  - term: PostContactsUpdateResponse
+    definition: 'Object declared by the contract with fields: type, id.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUpdateResponse
+  - term: PostContactsUntagRequest
+    definition: 'Object declared by the contract with fields: id, tags.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUntagRequest
+  - term: PostContactsUploadavatarRequest
+    definition: 'Object declared by the contract with fields: id, image.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsUploadavatarRequest
+  - term: PostContactsInfoRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsInfoRequest
+  - term: PostContactsLinktocompanyRequest
+    definition: 'Object declared by the contract with fields: id, company_id, position, decision_maker.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsLinktocompanyRequest
+  - term: PostContactsDeleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsDeleteRequest
+  - term: PostContactsAddRequest
+    definition: 'Object declared by the contract with fields: first_name, last_name, emails, salutation, telephones, website, addresses, language,
+      gender, birthdate, iban, bic. (6 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-contacts-api-openapi.yml#/components/schemas/PostContactsAddRequest
+  - term: PostDaysoffBulkdeleteRequest
+    definition: 'Object declared by the contract with fields: user_id, ids.'
+    tags:
+    - Object
+    source: openapi/teamleader-daysoff-api-openapi.yml#/components/schemas/PostDaysoffBulkdeleteRequest
+  - term: PostDealsListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsListResponse
+  - term: PostDealsInfoResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsInfoResponse
+  - term: PostDealsInfoRequest
+    definition: 'Object declared by the contract with fields: id, includes.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsInfoRequest
+  - term: PostDealsUpdateRequest
+    definition: 'Object declared by the contract with fields: id, lead, title, summary, source_id, department_id, responsible_user_id, second_responsible_user_id,
+      estimated_value, estimated_probability, estimated_closing_date, custom_fields. (2 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsUpdateRequest
+  - term: PostDealsLoseRequest
+    definition: 'Object declared by the contract with fields: id, reason_id, extra_info.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsLoseRequest
+  - term: PostDealsWinRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsWinRequest
+  - term: PostDealsMoveRequest
+    definition: 'Object declared by the contract with fields: id, phase_id.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsMoveRequest
+  - term: PostDealsCreateRequest
+    definition: 'Object declared by the contract with fields: lead, title, summary, source_id, department_id, responsible_user_id, second_responsible_user_id,
+      phase_id, estimated_value, estimated_probability, estimated_closing_date, custom_fields. (2 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsCreateRequest
+  - term: PostDealsDeleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsDeleteRequest
+  - term: PostDealsCreateResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsCreateResponse
+  - term: PostDealsListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort.'
+    tags:
+    - Object
+    source: openapi/teamleader-deals-api-openapi.yml#/components/schemas/PostDealsListRequest
+  - term: PostExpensesListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort.'
+    tags:
+    - Object
+    source: openapi/teamleader-expenses-api-openapi.yml#/components/schemas/PostExpensesListRequest
+  - term: PostExpensesListResponse
+    definition: 'Object declared by the contract with fields: data, meta.'
+    tags:
+    - Object
+    source: openapi/teamleader-expenses-api-openapi.yml#/components/schemas/PostExpensesListResponse
+  - term: PostFilesDeleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesDeleteRequest
+  - term: PostFilesInfoResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesInfoResponse
+  - term: PostFilesUploadRequest
+    definition: 'Object declared by the contract with fields: name, subject, folder.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesUploadRequest
+  - term: PostFilesDownloadResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesDownloadResponse
+  - term: PostFilesListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesListRequest
+  - term: PostFilesInfoRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesInfoRequest
+  - term: PostFilesUploadResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesUploadResponse
+  - term: PostFilesListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesListResponse
+  - term: PostFilesDownloadRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-files-api-openapi.yml#/components/schemas/PostFilesDownloadRequest
+  - term: PostInvoicesListResponse
+    definition: 'Object declared by the contract with fields: data, meta.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesListResponse
+  - term: PostInvoicesDraftResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesDraftResponse
+  - term: PostInvoicesCopyRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesCopyRequest
+  - term: PostInvoicesUpdatebookedRequest
+    definition: 'Object declared by the contract with fields: id, invoicee, payment_term, project_id, grouped_lines, invoice_date, note, invoice_content,
+      expected_payment_method, custom_fields.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesUpdatebookedRequest
+  - term: PostInvoicesDownloadResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesDownloadResponse
+  - term: PostInvoicesListRequest
+    definition: 'Object declared by the contract with fields: filter, page.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesListRequest
+  - term: PostInvoicesDownloadRequest
+    definition: 'Object declared by the contract with fields: id, format.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesDownloadRequest
+  - term: PostInvoicesCopyResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesCopyResponse
+  - term: PostInvoicesDraftRequest
+    definition: 'Object declared by the contract with fields: invoicee, department_id, payment_term, currency, project_id, purchase_order_number,
+      quotation_id, grouped_lines, invoice_date, discounts, note, invoice_content. (4 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesDraftRequest
+  - term: PostInvoicesInfoResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesInfoResponse
+  - term: PostInvoicesDeleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesDeleteRequest
+  - term: PostInvoicesInfoRequest
+    definition: 'Object declared by the contract with fields: id, includes.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesInfoRequest
+  - term: PostInvoicesUpdateRequest
+    definition: 'Object declared by the contract with fields: id, invoicee, payment_term, currency, project_id, purchase_order_number, grouped_lines,
+      invoice_date, note, invoice_content, discounts, expected_payment_method. (3 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesUpdateRequest
+  - term: PostInvoicesBookRequest
+    definition: 'Object declared by the contract with fields: id, on.'
+    tags:
+    - Object
+    source: openapi/teamleader-invoices-api-openapi.yml#/components/schemas/PostInvoicesBookRequest
+  - term: PostLeveltwoareasListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-leveltwoareas-api-openapi.yml#/components/schemas/PostLeveltwoareasListResponse
+  - term: PostLeveltwoareasListRequest
+    definition: 'Object declared by the contract with fields: country, language.'
+    tags:
+    - Object
+    source: openapi/teamleader-leveltwoareas-api-openapi.yml#/components/schemas/PostLeveltwoareasListRequest
+  - term: PostLostreasonsListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-lostreasons-api-openapi.yml#/components/schemas/PostLostreasonsListResponse
+  - term: PostLostreasonsListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort.'
+    tags:
+    - Object
+    source: openapi/teamleader-lostreasons-api-openapi.yml#/components/schemas/PostLostreasonsListRequest
+  - term: PostPaymentmethodsListRequest
+    definition: 'Object declared by the contract with fields: filter, page.'
+    tags:
+    - Object
+    source: openapi/teamleader-payment-methods-api-openapi.yml#/components/schemas/PostPaymentmethodsListRequest
+  - term: PostPaymentmethodsListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-payment-methods-api-openapi.yml#/components/schemas/PostPaymentmethodsListResponse
+  - term: PostTasksInfoRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksInfoRequest
+  - term: PostTasksReopenRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksReopenRequest
+  - term: PostTasksInfoResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksInfoResponse
+  - term: PostTasksCreateRequest
+    definition: 'Object declared by the contract with fields: title, description, due_on, work_type_id, milestone_id, project_id, deal_id, ticket_id,
+      estimated_duration, assignee, customer, custom_fields.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksCreateRequest
+  - term: PostTasksCreateResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksCreateResponse
+  - term: PostTasksListResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksListResponse
+  - term: PostTasksScheduleRequest
+    definition: 'Object declared by the contract with fields: id, starts_at, ends_at.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksScheduleRequest
+  - term: PostTasksScheduleResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksScheduleResponse
+  - term: PostTasksListRequest
+    definition: 'Object declared by the contract with fields: filter, page, sort.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksListRequest
+  - term: PostTasksUpdateRequest
+    definition: 'Object declared by the contract with fields: id, title, description, due_on, work_type_id, milestone_id, project_id, deal_id,
+      ticket_id, estimated_duration, assignee, customer. (1 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksUpdateRequest
+  - term: PostTasksDeleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksDeleteRequest
+  - term: PostTasksCompleteRequest
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tasks-api-openapi.yml#/components/schemas/PostTasksCompleteRequest
+  - term: PostTicketsCreateRequest
+    definition: 'Object declared by the contract with fields: subject, customer, ticket_status_id, assignee, custom_fields, description, participant,
+      initial_reply, milestone_id, project_id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsCreateRequest
+  - term: PostTicketsListmessagesRequest
+    definition: 'Object declared by the contract with fields: id, filter, page.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsListmessagesRequest
+  - term: PostTicketsAddinternalmessageRequest
+    definition: 'Object declared by the contract with fields: id, body, ticket_status_id, attachments.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsAddinternalmessageRequest
+  - term: PostTicketsAddreplyResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsAddreplyResponse
+  - term: PostTicketsListRequest
+    definition: 'Object declared by the contract with fields: filter, page.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsListRequest
+  - term: PostTicketsAddinternalmessageResponse
+    definition: 'Object declared by the contract with fields: data.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsAddinternalmessageResponse
+  - term: PostTicketsImportmessageRequest
+    definition: 'Object declared by the contract with fields: id, body, sent_by, sent_at, attachments.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsImportmessageRequest
+  - term: PostTicketsInfoResponse
+    definition: 'Object declared by the contract with fields: id, reference, subject, status, assignee, created_at, closed_at, customer, participant,
+      last_message_at, description, project. (2 more)'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsInfoResponse
+  - term: PostTicketsListmessagesResponse
+    definition: 'Object declared by the contract with fields: data, meta.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsListmessagesResponse
+  - term: PostTicketsUpdateRequest
+    definition: 'Object declared by the contract with fields: id, subject, description, ticket_status_id, customer, assignee, participant, custom_fields,
+      milestone_id, project_id.'
+    tags:
+    - Object
+    source: openapi/teamleader-tickets-api-openapi.yml#/components/schemas/PostTicketsUpdateRequest

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/teamleader/main/json-schema/teamleader-post-contacts-add-request-schema.json",
+  "title": "PostContactsAddRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/teamleader-openapi-generated.yml#/components/schemas/PostContactsAddRequest",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "emails": {
+      "type": "object"
+    },
+    "salutation": {
+      "type": "string"
+    },
+    "telephones": {
+      "type": "object"
+    },
+    "website": {
+      "type": "string"
+    },
+    "addresses": {
+      "type": "object"
+    },
+    "language": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "string"
+    },
+    "iban": {
+      "type": "string"
+    },
+    "bic": {
+      "type": "string"
+    },
+    "national_identification_number": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string",
+      "description": "This is the background information in Markdown"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "object"
+    },
+    "marketing_mails_consent": {
+      "type": "boolean"
+    },
+    "price_list_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name"
+  ]
+}

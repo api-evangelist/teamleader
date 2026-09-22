@@ -1,0 +1,49 @@
+{
+  "provider": "teamleader",
+  "sources": [
+    "_ae-authored/teamleader-openapi-generated.yml"
+  ],
+  "outputs": [
+    "teamleader-contacts-api-openapi.yml",
+    "teamleader-daysoff-api-openapi.yml",
+    "teamleader-deals-api-openapi.yml",
+    "teamleader-expenses-api-openapi.yml",
+    "teamleader-files-api-openapi.yml",
+    "teamleader-invoices-api-openapi.yml",
+    "teamleader-leveltwoareas-api-openapi.yml",
+    "teamleader-lostreasons-api-openapi.yml",
+    "teamleader-paymentmethods-api-openapi.yml",
+    "teamleader-tasks-api-openapi.yml",
+    "teamleader-tickets-api-openapi.yml",
+    "teamleader-ticketstatus-api-openapi.yml",
+    "teamleader-timers-api-openapi.yml",
+    "teamleader-useravailability-api-openapi.yml"
+  ],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "teamleader-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: teamleader-payment-methods-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 14 total)"
+  ],
+  "skipped": [
+    "teamleader-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-daysoff-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-deals-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-expenses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-invoices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-leveltwoareas-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-lostreasons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-payment-methods-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-ticketstatus-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-timers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "teamleader-useravailability-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}

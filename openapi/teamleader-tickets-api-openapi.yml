@@ -1,0 +1,483 @@
+openapi: 3.2.0
+info:
+  title: Teamleader Tickets API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 58 operation(s) read from 60 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Teamleader has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://developer.focus.teamleader.eu/docs/authentication
+  - https://developer.focus.teamleader.eu/docs/general-principles
+  - https://developer.focus.teamleader.eu/docs/api/deals-list
+  - https://developer.focus.teamleader.eu/docs/api/deals-info
+  - https://developer.focus.teamleader.eu/docs/api/deals-create
+  - https://developer.focus.teamleader.eu/docs/api/deals-update
+  - https://developer.focus.teamleader.eu/docs/api/deals-move
+  - https://developer.focus.teamleader.eu/docs/api/deals-win
+  - https://developer.focus.teamleader.eu/docs/api/deals-lose
+  - https://developer.focus.teamleader.eu/docs/api/deals-delete
+  - https://developer.focus.teamleader.eu/docs/api/lost-reasons-list
+  - https://developer.focus.teamleader.eu/docs/api/level-two-areas-list
+  - https://developer.focus.teamleader.eu/docs/api/files-list
+  - https://developer.focus.teamleader.eu/docs/api/files-info
+  - https://developer.focus.teamleader.eu/docs/api/files-download
+  - https://developer.focus.teamleader.eu/docs/api/files-upload
+  - https://developer.focus.teamleader.eu/docs/api/files-delete
+  - https://developer.focus.teamleader.eu/docs/api/ticket-status-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-info
+  - https://developer.focus.teamleader.eu/docs/api/tasks-create
+  - https://developer.focus.teamleader.eu/docs/api/tasks-update
+  - https://developer.focus.teamleader.eu/docs/api/tasks-complete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-reopen
+  - https://developer.focus.teamleader.eu/docs/api/tasks-delete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-schedule
+  - https://developer.focus.teamleader.eu/docs/api/user-availability-daily
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list
+  - https://developer.focus.teamleader.eu/docs/api/tickets-info
+  - https://developer.focus.teamleader.eu/docs/api/tickets-create
+  - https://developer.focus.teamleader.eu/docs/api/tickets-update
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+  - https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+  - https://developer.focus.teamleader.eu/docs/api/timers-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-list
+  - https://developer.focus.teamleader.eu/docs/api/contacts-info
+  - https://developer.focus.teamleader.eu/docs/api/contacts-add
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-delete
+  - https://developer.focus.teamleader.eu/docs/api/contacts-tag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-untag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-link-to-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-unlink-from-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update-company-link
+  - https://developer.focus.teamleader.eu/docs/api/contacts-upload-avatar
+  - https://developer.focus.teamleader.eu/docs/api/days-off-bulk-delete
+  - https://developer.focus.teamleader.eu/docs/api/expenses-list
+  - https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-info
+  - https://developer.focus.teamleader.eu/docs/api/invoices-download
+  - https://developer.focus.teamleader.eu/docs/api/invoices-draft
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update-booked
+  - https://developer.focus.teamleader.eu/docs/api/invoices-copy
+  - https://developer.focus.teamleader.eu/docs/api/invoices-book
+  - https://developer.focus.teamleader.eu/docs/api/invoices-delete
+servers:
+- url: https://api.focus.teamleader.eu
+security:
+- bearer: []
+tags:
+- name: Tickets
+paths:
+  /tickets.addInternalMessage:
+    post:
+      operationId: post_tickets_addInternalMessage
+      tags:
+      - Tickets
+      summary: Adds an internal message to a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsAddinternalmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsAddinternalmessageResponse'
+  /tickets.addReply:
+    post:
+      operationId: post_tickets_addReply
+      tags:
+      - Tickets
+      summary: Adds a message to a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsAddreplyRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsAddreplyResponse'
+  /tickets.create:
+    post:
+      operationId: post_tickets_create
+      tags:
+      - Tickets
+      summary: Create a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsCreateResponse'
+  /tickets.getMessage:
+    post:
+      operationId: post_tickets_getMessage
+      tags:
+      - Tickets
+      summary: Gets the ticket message
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsGetmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsGetmessageResponse'
+  /tickets.importMessage:
+    post:
+      operationId: post_tickets_importMessage
+      tags:
+      - Tickets
+      summary: Imports an existing message to a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsImportmessageRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsImportmessageResponse'
+  /tickets.info:
+    post:
+      operationId: post_tickets_info
+      tags:
+      - Tickets
+      summary: Get details for a single ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-info
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsInfoResponse'
+  /tickets.list:
+    post:
+      operationId: post_tickets_list
+      tags:
+      - Tickets
+      summary: Get a list of tickets
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-list
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsListResponse'
+  /tickets.listMessages:
+    post:
+      operationId: post_tickets_listMessages
+      tags:
+      - Tickets
+      summary: Lists messages of a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsListmessagesRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTicketsListmessagesResponse'
+  /tickets.update:
+    post:
+      operationId: post_tickets_update
+      tags:
+      - Tickets
+      summary: Update a ticket
+      x-source: https://developer.focus.teamleader.eu/docs/api/tickets-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTicketsUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+components:
+  schemas:
+    PostTicketsCreateRequest:
+      type: object
+      properties:
+        subject:
+          type: string
+        customer:
+          type: object
+        ticket_status_id:
+          type: string
+        assignee:
+          type: object
+        custom_fields:
+          type: object
+        description:
+          type: string
+          description: Uses Markdown formatting
+        participant:
+          type: object
+        initial_reply:
+          type: string
+          description: 'Create & send an initial autoreply according to configuration (default: automatic). Possible values: [automatic, disabled]'
+        milestone_id:
+          type: string
+          description: Links the ticket to a milestone. Only applicable to accounts using legacy projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
+        project_id:
+          type: string
+          description: Links the ticket to a project. Only applicable to accounts using the new projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
+      required:
+      - subject
+      - customer
+      - ticket_status_id
+    PostTicketsListmessagesRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        filter:
+          type: object
+        page:
+          type: object
+      required:
+      - id
+    PostTicketsAddinternalmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+    PostTicketsAddreplyResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+    PostTicketsAddinternalmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsImportmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        sent_by:
+          type: object
+        sent_at:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+      - sent_by
+      - sent_at
+    PostTicketsInfoResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        reference:
+          type: number
+        subject:
+          type: string
+        status:
+          type: object
+        assignee:
+          type: object
+        created_at:
+          type: string
+        closed_at:
+          type: string
+        customer:
+          type: object
+        participant:
+          type: object
+        last_message_at:
+          type: string
+        description:
+          type: string
+        project:
+          type: object
+        milestone:
+          type: object
+        custom_fields:
+          type: object
+    PostTicketsListmessagesResponse:
+      type: object
+      properties:
+        data:
+          type: object
+        meta:
+          type: object
+    PostTicketsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        subject:
+          type: string
+        description:
+          type: string
+        ticket_status_id:
+          type: string
+        customer:
+          type: object
+        assignee:
+          type: object
+        participant:
+          type: object
+        custom_fields:
+          type: object
+        milestone_id:
+          type: string
+        project_id:
+          type: string
+      required:
+      - id
+    PostTicketsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTicketsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsGetmessageRequest:
+      type: object
+      properties:
+        message_id:
+          type: string
+      required:
+      - message_id
+    PostTicketsGetmessageResponse:
+      type: object
+      properties:
+        message_id:
+          type: string
+        body:
+          type: string
+        raw_body:
+          type: string
+        created_at:
+          type: string
+        sent_by:
+          type: object
+        ticket:
+          type: object
+        attachments:
+          type: object
+        type:
+          type: string
+    PostTicketsImportmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsAddreplyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

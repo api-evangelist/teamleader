@@ -1,0 +1,378 @@
+openapi: 3.2.0
+info:
+  title: Teamleader Deals API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 58 operation(s) read from 60 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Teamleader has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://developer.focus.teamleader.eu/docs/authentication
+  - https://developer.focus.teamleader.eu/docs/general-principles
+  - https://developer.focus.teamleader.eu/docs/api/deals-list
+  - https://developer.focus.teamleader.eu/docs/api/deals-info
+  - https://developer.focus.teamleader.eu/docs/api/deals-create
+  - https://developer.focus.teamleader.eu/docs/api/deals-update
+  - https://developer.focus.teamleader.eu/docs/api/deals-move
+  - https://developer.focus.teamleader.eu/docs/api/deals-win
+  - https://developer.focus.teamleader.eu/docs/api/deals-lose
+  - https://developer.focus.teamleader.eu/docs/api/deals-delete
+  - https://developer.focus.teamleader.eu/docs/api/lost-reasons-list
+  - https://developer.focus.teamleader.eu/docs/api/level-two-areas-list
+  - https://developer.focus.teamleader.eu/docs/api/files-list
+  - https://developer.focus.teamleader.eu/docs/api/files-info
+  - https://developer.focus.teamleader.eu/docs/api/files-download
+  - https://developer.focus.teamleader.eu/docs/api/files-upload
+  - https://developer.focus.teamleader.eu/docs/api/files-delete
+  - https://developer.focus.teamleader.eu/docs/api/ticket-status-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-list
+  - https://developer.focus.teamleader.eu/docs/api/tasks-info
+  - https://developer.focus.teamleader.eu/docs/api/tasks-create
+  - https://developer.focus.teamleader.eu/docs/api/tasks-update
+  - https://developer.focus.teamleader.eu/docs/api/tasks-complete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-reopen
+  - https://developer.focus.teamleader.eu/docs/api/tasks-delete
+  - https://developer.focus.teamleader.eu/docs/api/tasks-schedule
+  - https://developer.focus.teamleader.eu/docs/api/user-availability-daily
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list
+  - https://developer.focus.teamleader.eu/docs/api/tickets-info
+  - https://developer.focus.teamleader.eu/docs/api/tickets-create
+  - https://developer.focus.teamleader.eu/docs/api/tickets-update
+  - https://developer.focus.teamleader.eu/docs/api/tickets-list-messages
+  - https://developer.focus.teamleader.eu/docs/api/tickets-get-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-import-message
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-reply
+  - https://developer.focus.teamleader.eu/docs/api/tickets-add-internal-message
+  - https://developer.focus.teamleader.eu/docs/api/timers-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-list
+  - https://developer.focus.teamleader.eu/docs/api/contacts-info
+  - https://developer.focus.teamleader.eu/docs/api/contacts-add
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update
+  - https://developer.focus.teamleader.eu/docs/api/contacts-delete
+  - https://developer.focus.teamleader.eu/docs/api/contacts-tag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-untag
+  - https://developer.focus.teamleader.eu/docs/api/contacts-link-to-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-unlink-from-company
+  - https://developer.focus.teamleader.eu/docs/api/contacts-update-company-link
+  - https://developer.focus.teamleader.eu/docs/api/contacts-upload-avatar
+  - https://developer.focus.teamleader.eu/docs/api/days-off-bulk-delete
+  - https://developer.focus.teamleader.eu/docs/api/expenses-list
+  - https://developer.focus.teamleader.eu/docs/api/payment-methods-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-list
+  - https://developer.focus.teamleader.eu/docs/api/invoices-info
+  - https://developer.focus.teamleader.eu/docs/api/invoices-download
+  - https://developer.focus.teamleader.eu/docs/api/invoices-draft
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update
+  - https://developer.focus.teamleader.eu/docs/api/invoices-update-booked
+  - https://developer.focus.teamleader.eu/docs/api/invoices-copy
+  - https://developer.focus.teamleader.eu/docs/api/invoices-book
+  - https://developer.focus.teamleader.eu/docs/api/invoices-delete
+servers:
+- url: https://api.focus.teamleader.eu
+security:
+- bearer: []
+tags:
+- name: Deals
+paths:
+  /deals.create:
+    post:
+      operationId: post_deals_create
+      tags:
+      - Deals
+      summary: Create a new deal for a customer
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsCreateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsCreateResponse'
+  /deals.delete:
+    post:
+      operationId: post_deals_delete
+      tags:
+      - Deals
+      summary: Delete a deal
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-delete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsDeleteRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.info:
+    post:
+      operationId: post_deals_info
+      tags:
+      - Deals
+      summary: Get details for a single deal
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-info
+      parameters:
+      - name: includes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of optional includes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsInfoRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsInfoResponse'
+  /deals.list:
+    post:
+      operationId: post_deals_list
+      tags:
+      - Deals
+      summary: Get a list of deals
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-list
+      parameters:
+      - name: includes
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of optional includes
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDealsListResponse'
+  /deals.lose:
+    post:
+      operationId: post_deals_lose
+      tags:
+      - Deals
+      summary: Mark a deal as lost
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-lose
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsLoseRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.move:
+    post:
+      operationId: post_deals_move
+      tags:
+      - Deals
+      summary: Move the deal to a different phase
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-move
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsMoveRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.update:
+    post:
+      operationId: post_deals_update
+      tags:
+      - Deals
+      summary: Update a deal
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsUpdateRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+  /deals.win:
+    post:
+      operationId: post_deals_win
+      tags:
+      - Deals
+      summary: Mark a deal as won
+      x-source: https://developer.focus.teamleader.eu/docs/api/deals-win
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDealsWinRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+components:
+  schemas:
+    PostDealsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: Comma-separated list of optional includes
+      required:
+      - id
+    PostDealsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        lead:
+          type: object
+        title:
+          type: string
+        summary:
+          type: string
+        source_id:
+          type: string
+        department_id:
+          type: string
+        responsible_user_id:
+          type: string
+        second_responsible_user_id:
+          type: string
+        estimated_value:
+          type: object
+        estimated_probability:
+          type: number
+        estimated_closing_date:
+          type: string
+        custom_fields:
+          type: object
+        currency:
+          type: object
+        purchase_order_number:
+          type: string
+      required:
+      - id
+    PostDealsLoseRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        reason_id:
+          type: string
+        extra_info:
+          type: string
+      required:
+      - id
+    PostDealsWinRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostDealsMoveRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        phase_id:
+          type: string
+      required:
+      - id
+      - phase_id
+    PostDealsCreateRequest:
+      type: object
+      properties:
+        lead:
+          type: object
+        title:
+          type: string
+        summary:
+          type: string
+          description: This is the remarks field
+        source_id:
+          type: string
+        department_id:
+          type: string
+        responsible_user_id:
+          type: string
+        second_responsible_user_id:
+          type: string
+          description: This requires the second deal responsible feature to be enabled. Contact support.focus@teamleader.eu to enable it
+        phase_id:
+          type: string
+        estimated_value:
+          type: object
+        estimated_probability:
+          type: number
+          description: A number between 0 and 1 (inclusive)
+        estimated_closing_date:
+          type: string
+        custom_fields:
+          type: object
+        currency:
+          type: object
+        purchase_order_number:
+          type: string
+      required:
+      - lead
+      - title
+    PostDealsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostDealsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
