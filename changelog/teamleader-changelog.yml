@@ -1,0 +1,73 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.focus.teamleader.eu/docs/changelog/additions
+sources:
+- https://developer.focus.teamleader.eu/docs/changelog/additions
+entries:
+- breaking: false
+  highlights:
+  - 'We documented the second responsible user on the deals endpoints: deals.info and deals.list can return it through includes=second_responsible_user,
+    and deals.create and deals.update accept second_responsible_user_id.'
+  - We clarified that product_category and product_category_id are ledger accounts, on the products, invoices, credit notes, subscriptions and
+    orders endpoints.
+  - We added the invoice_content field to the invoices and subscriptions endpoints. It's goods, services, or goods_and_services, and required
+    when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France.
+  date: '2026-09-01'
+- breaking: false
+  highlights:
+  - The estimated_value amount on deals.create and deals.update may now be negative.
+  - We added support for name on quotations.create and quotations.update.
+  - We made the company_id filter on contacts.list nullable.
+  date: '2026-08-01'
+- breaking: false
+  highlights:
+  - We documented price_list on the contacts.info and companies.info responses.
+  - We added the /incomingInvoices.{add, approve, delete, info, markAsPendingReview, refuse, sendToBookkeeping, update} endpoints.
+  - We added the /expenses.list endpoint.
+  date: '2026-07-01'
+- breaking: false
+  highlights:
+  - We added the projects-v2/externalParties.addToProject, projects-v2/externalParties.update and projects-v2/externalParties.delete endpoints.
+  date: '2025-06-01'
+- breaking: false
+  highlights:
+  - We added the orders.info and orders.list endpoints.
+  date: '2025-05-01'
+- breaking: false
+  highlights:
+  - We added created_at to the response of meetings.info.
+  - We added customer sorting to projects-v2/projects.list.
+  date: '2025-04-01'
+- breaking: false
+  highlights:
+  - We added custom_fields to projects-v2/tasks.info.
+  - We added nextgenTask.completed, nextgenTask.created, nextgenTask.deleted and nextgenTask.updated to supported Webhook types.
+  date: '2025-02-01'
+- breaking: false
+  highlights:
+  - We added ubl/peppol_bis_3 to the list of allowed formats in invoices.download.
+  - We added periodicity to the quotation line items in quotations.info, quotations.create and quotations.update.
+  date: '2025-01-01'
+- breaking: false
+  highlights:
+  - We added initial_time_tracked, initial_price, initial_cost, initial_amount_billed, and initial_amount_paid to projects-v2/projects.create.
+  date: '2024-12-01'
+- breaking: false
+  highlights:
+  - We added name to quotations.info and quotations.list.
+  - We added payment_method property to invoice_generation object on subscription.info, subscriptions.create and subscriptions.update endpoints.
+  date: '2024-11-01'
+- breaking: false
+  highlights:
+  - We added preferred_currency to the companies.add and companies.update endpoints.
+  date: '2024-10-01'
+- breaking: false
+  highlights:
+  - We added will_be_automatically_switched_on to the accounts.projects-v2-status endpoint.
+  - The property pipeline on deals.list has been documented as resource.
+  - We added pipeline to the deals.info endpoint.
+  date: '2024-09-01'
+current_version: 2026-09
+note: Versioning scheme is based on year-month entries as listed in the changelog.
+docs: https://developer.focus.teamleader.eu/docs/changelog/additions

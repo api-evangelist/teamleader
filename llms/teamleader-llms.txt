@@ -1,0 +1,113 @@
+# Teamleader
+
+> Teamleader develops business management software for SMEs, entrepreneurs, and agencies in Europe. Four product lines: **Teamleader Focus** (all-in-one business software for small businesses, combining CRM, quotations, invoicing, time tracking, project management, and work orders), **Teamleader Orbit** (premium agency software combining project management, capacity planning, timesheets and financial reporting), **Teamleader One** (Peppol e-invoicing software for the self-employed), and **Dexxter by Teamleader** (automated bookkeeping for Belgian sole proprietors). Companion product: **Vectera by Teamleader** (customer meeting and scheduling platform). Founded in 2012 in Ghent, Belgium, with an office in Amsterdam and a dedicated sales presence in Germany. Over 34,000 customers across Belgium, the Netherlands, Germany, France, Spain, and Italy. Part of Visma since 2022.
+
+This file is a curated index of the most important pages on [teamleader.eu](https://www.teamleader.eu/) for large language models and AI agents.
+
+## Company
+
+- [About Teamleader](https://www.teamleader.eu/about): Company background, mission, leadership, and history. Founded 2012, HQ in Ghent (BE), part of Visma since 2022.
+- [Jobs at Teamleader](https://www.teamleader.eu/jobs): Open positions across product, engineering, sales, marketing, and support in Ghent, Amsterdam, and remote.
+- [Contact](https://www.teamleader.eu/contact): Sales and general contact details for all markets.
+- [Events](https://www.teamleader.eu/events): Upcoming Teamleader events, including the annual Work Smarter conference.
+
+## Products
+
+- [Teamleader Focus](https://www.teamleader.eu/focus): All-in-one business management software for SMEs and entrepreneurs. CRM, quotations, invoicing, time tracking, work orders, project management. Sold across BE, NL, FR, ES, IT. 14-day free trial.
+- [Teamleader Orbit](https://www.teamleader.eu/orbit): Premium work management software for agencies. Advanced project and resource planning, financial reporting, and profitability analysis per person, project, department, and client. Supports retainers, incoming invoices, freelance hours. Same go-to-market across all geographies.
+- [Teamleader One](https://one.teamleader.eu/): E-invoicing software for the self-employed (eenmanszaak), part-time entrepreneurs, and small private limited companies (BV). Unlimited Peppol invoicing, accountant sharing, quotations, contacts, and dashboard. 14-day free trial. Currently sold in Belgium; launching in the Netherlands to support the EU e-invoicing mandate.
+- [Dexxter by Teamleader](https://www.dexxter.be/): Automated single-entry bookkeeping software for Belgian sole proprietors, starters, and student entrepreneurs who manage their own books without a bookkeeper. Belgium only.
+- [Vectera by Teamleader](https://www.vectera.com/): Customer meeting and scheduling platform. Companion product line offering video meetings and appointment booking that integrates across the Teamleader portfolio.
+
+## Pricing
+
+- [Teamleader Focus pricing](https://www.teamleader.eu/pricing): Per-user monthly subscription with modular add-ons.
+- [Teamleader Orbit pricing](https://www.teamleader.eu/orbit/pricing): Agency-tier packages, quote-based.
+- [Teamleader One pricing](https://one.teamleader.eu/nl-be#price): €99 per year.
+- [Request a quotation](https://www.teamleader.eu/quotation): Custom pricing for larger teams and agencies.
+
+## Solutions and use cases for Teamleader Focus
+
+- [All solutions](https://www.teamleader.eu/solutions): Full overview of Teamleader solutions by use case.
+- [CRM](https://www.teamleader.eu/solutions/crm): Contact and company database, deal pipelines, segmentation, sales follow-up.
+- [Quotations](https://www.teamleader.eu/solutions/quotations): Quote templates, e-signature, conversion to invoice, multiple quotations per deal.
+- [Invoicing](https://www.teamleader.eu/solutions/invoices): Recurring invoices, prepaid billing, Peppol e-invoicing, VAT handling, QR codes, payment follow-up.
+- [Project management](https://www.teamleader.eu/solutions/project-management): Project planning, tasks, time tracking, billing per project.
+- [Planning](https://www.teamleader.eu/solutions/planning): Resource and capacity planning for teams.
+- [Insights and reporting](https://www.teamleader.eu/solutions/insights): Business KPIs, sales forecasts, project profitability.
+- [Work orders](https://www.teamleader.eu/solutions/work-orders): Field service work orders and on-site execution.
+- [Lead capture](https://www.teamleader.eu/solutions/lead-capture): Contact forms and lead generation tooling.
+- [Shared inbox](https://www.teamleader.eu/solutions/shared-inbox): Team email management linked to CRM.
+- [Expenses](https://www.teamleader.eu/solutions/expenses): Expense submission, approval, and reporting.
+- [Accounting Connector](https://www.teamleader.eu/solutions/accounting-connector): Sync invoices and bookkeeping with external accounting software (Exact, Yuki, Octopus, and others).
+
+## Solutions and use cases for Teamleader Orbit
+
+- [Teamleader Orbit functionalities](https://www.teamleader.eu/orbit/functionaliteiten): Full feature overview of Teamleader Orbit.
+
+## E-invoicing and Peppol
+
+- [E-invoicing: the ultimate guide to Peppol](https://www.teamleader.eu/s/e-invoicing): Explainer on the Peppol network and how e-invoicing works for Belgian and Dutch businesses.
+- [Best invoicing software](https://www.teamleader.eu/s/invoicing-software): Comparison and guidance on choosing invoicing software.
+
+## Integrations and developers
+
+- [Integrations overview](https://www.teamleader.eu/solutions/integrations): Native and partner integrations including Outlook, Gmail, Mollie, Stripe, Exact, Yuki, Octopus, and accounting connectors.
+- [Marketplace](https://marketplace.teamleader.eu/): Full marketplace of integrations and partner apps.
+- [Developer portal and API](https://developer.teamleader.eu/): REST API, OAuth, webhooks, and developer documentation for Teamleader Focus.
+
+## Customers and community
+
+- [Customer stories](https://www.teamleader.eu/customer-stories): Case studies from agencies, SMEs, and consultancies using Teamleader.
+- [Agency Life](https://www.teamleader.eu/agency-life): Community and content hub for agency owners and operators.
+- [Work Smarter](https://www.worksmarter.be/): Knowledge platform and annual conference by Teamleader for entrepreneurs, accountants and agencies and their teams.
+
+## Support
+
+- [Teamleader Focus support](https://support.focus.teamleader.eu/hc/en-150): Help center for Teamleader Focus customers.
+- [Teamleader One support](https://support.one.teamleader.eu/): Help center for Teamleader One customers.
+- [After-sales service](https://www.teamleader.eu/after-sales-service): Overview of customer support and success offerings.
+
+## Resources
+
+- [Blog](https://www.teamleader.eu/blog): Articles on CRM, sales, invoicing, project management, and agency operations.
+- [E-books](https://www.teamleader.eu/ebooks): In-depth guides on running an SME, sales, project management, and agency operations.
+
+## Cornerstone articles
+
+- [What is CRM?](https://www.teamleader.eu/blog/what-is-crm): Introduction to CRM software and what it does.
+- [Excel versus CRM](https://www.teamleader.eu/blog/excel-crm): Why spreadsheets fall short for managing customers.
+- [Sales techniques: 5 modern methods](https://www.teamleader.eu/blog/sales-techniques): Overview of contemporary B2B sales approaches.
+- [How to create a project plan (with template)](https://www.teamleader.eu/blog/how-to-create-an-impeccable-project-plan): Step-by-step project planning guide.
+- [Project management methods](https://www.teamleader.eu/blog/project-management-methods): Comparison of project management methodologies.
+- [Capacity planning](https://www.teamleader.eu/blog/capacity-planning): How capacity planning increases agency profitability.
+- [Scope creep](https://www.teamleader.eu/blog/scope-creep): How to recognize and prevent scope creep on projects.
+- [Sales funnel](https://www.teamleader.eu/blog/sales-funnel): What a sales funnel is and how to use one.
+- [Sales forecast (5 strategies)](https://www.teamleader.eu/blog/sales-forecast): Five practical methods for building a sales forecast.
+- [Customer data management](https://www.teamleader.eu/blog/customer-data-management-how-to): How to build and maintain a customer database.
+- [Online invoicing](https://www.teamleader.eu/blog/online-invoicing): Guide to creating online invoices.
+- [Project management for SMEs: fundamentals](https://www.teamleader.eu/blog/project-management-smes-fundamentals-principles): Project management principles for small and medium businesses.
+
+## Company news
+
+- [Teamleader joins Visma (2022)](https://www.teamleader.eu/blog/teamleader-joins-visma-and-strengthens-its-position-on-the-european-market): Background on Teamleader becoming part of Visma.
+- [Teamleader acquires Dexxter and launches Teamleader One](https://www.teamleader.eu/blog/teamleader-acquires-accounting-app-dexxter-and-launches-teamleader-one-for-the-self-employed): Expansion of the product portfolio for self-employed.
+- [Teamleader acquires Vectera](https://www.teamleader.eu/blog/teamleader-acquisition-vectera): Background on the Vectera acquisition.
+- [United Experts Group selects Teamleader Orbit](https://www.teamleader.eu/blog/customer-win-united-experts): Customer win announcement for Teamleader Orbit.
+- [Teamleader, Yuki and AdminPulse join forces](https://www.teamleader.eu/nl-be/blog/een-team-een-missie): Operational integration under single leadership.
+
+## Legal and trust
+
+- [Security](https://www.teamleader.eu/security): Security practices, hosting, and data protection.
+- [GDPR](https://www.teamleader.eu/gdpr): GDPR compliance and data processing information.
+- [Privacy policy](https://www.teamleader.eu/privacy): Privacy policy.
+- [Legal](https://www.teamleader.eu/legal): Terms of service and legal information.
+
+## Optional
+
+- [Sitemap](https://www.teamleader.eu/sitemap): Full sitemap of teamleader.eu.
+- [Blog: Testimonial - Seldenthuis engineering](https://www.teamleader.eu/nl/blog/testimonial-seldenthuis-engineering): Customer testimonial. (Teamleader Focus)
+- [Blog: Testimonial - Vochtstop](https://www.teamleader.eu/nl/blog/vochtstop-testimonial): Customer testimonial. (Teamleader Focus)
+- [Blog: Testimonial - 24/7 Drive](https://www.teamleader.eu/nl/blog/chauffeursdiensten-testimonial): Customer testimonial. (Teamleader Focus)
+- [Blog: Testimonial - Emaillerie Belge](https://www.teamleader.eu/nl-be/blog/testimonial-emaillerie-belge): Customer testimonial. (Teamleader Focus)
+- [Blog: Testimonial - Lunar](https://www.teamleader.eu/blog/testimonial-lunar): Customer testimonial. (Teamleader Orbit)

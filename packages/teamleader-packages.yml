@@ -1,0 +1,31 @@
+generated: '2026-09-21'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (security/teamleader-domain-security.yml,
+  security/teamleader-trust-center.yml, security/teamleader-vulnerability-disclosure.yml, teamleader.eu) or its accepted GitHub org.'
+packages:
+- name: teamleader
+  registry: rubygems
+  url: https://rubygems.org/gems/teamleader
+  language: Ruby
+  official: true
+  version: 0.17.1
+  published: '2020-04-09'
+  evidence: metadata names teamleader.eu
+- name: teamleader
+  registry: npm
+  url: https://www.npmjs.com/package/teamleader
+  language: JavaScript
+  official: false
+  version: 1.0.0
+  published: '2016-02-18'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: teamleader
+  registry: pypi
+  url: https://pypi.org/project/teamleader/
+  language: Python
+  official: false
+  version: 1.1.0
+  published: '2022-03-24'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'

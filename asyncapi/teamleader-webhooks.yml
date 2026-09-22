@@ -1,0 +1,203 @@
+generated: '2026-09-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.focus.teamleader.eu/docs/api/webhooks
+sources:
+- https://developer.focus.teamleader.eu/docs/api/webhooks
+- https://developer.focus.teamleader.eu/docs/api/webhooks-list
+- https://developer.focus.teamleader.eu/docs/api/webhooks-register
+- https://developer.focus.teamleader.eu/docs/api/webhooks-unregister
+description: Teamleader webhooks fire for the following event types.
+events:
+- event: account.deactivated
+  description: Event account.deactivated.
+- event: account.deleted
+  description: Event account.deleted.
+- event: call.added
+  description: Event call.added.
+- event: call.completed
+  description: Event call.completed.
+- event: call.deleted
+  description: Event call.deleted.
+- event: call.updated
+  description: Event call.updated.
+- event: company.added
+  description: Event company.added.
+- event: company.deleted
+  description: Event company.deleted.
+- event: company.updated
+  description: Event company.updated.
+- event: contact.added
+  description: Event contact.added.
+- event: contact.deleted
+  description: Event contact.deleted.
+- event: contact.linkedToCompany
+  description: Event contact.linkedToCompany.
+- event: contact.unlinkedFromCompany
+  description: Event contact.unlinkedFromCompany.
+- event: contact.updatedLinkToCompany
+  description: Event contact.updatedLinkToCompany.
+- event: contact.updated
+  description: Event contact.updated.
+- event: creditNote.booked
+  description: Event creditNote.booked.
+- event: creditNote.deleted
+  description: Event creditNote.deleted.
+- event: creditNote.peppolSubmissionFailed
+  description: Event creditNote.peppolSubmissionFailed.
+- event: creditNote.peppolSubmissionSucceeded
+  description: Event creditNote.peppolSubmissionSucceeded.
+- event: creditNote.sent
+  description: Event creditNote.sent.
+- event: creditNote.updated
+  description: Event creditNote.updated.
+- event: deal.created
+  description: Event deal.created.
+- event: deal.deleted
+  description: Event deal.deleted.
+- event: deal.lost
+  description: Event deal.lost.
+- event: deal.moved
+  description: Event deal.moved.
+- event: deal.updated
+  description: Event deal.updated.
+- event: deal.won
+  description: Event deal.won.
+- event: incomingCreditNote.added
+  description: Event incomingCreditNote.added.
+- event: incomingCreditNote.approved
+  description: Event incomingCreditNote.approved.
+- event: incomingCreditNote.bookkeepingSubmissionFailed
+  description: Event incomingCreditNote.bookkeepingSubmissionFailed.
+- event: incomingCreditNote.bookkeepingSubmissionSucceeded
+  description: Event incomingCreditNote.bookkeepingSubmissionSucceeded.
+- event: incomingCreditNote.deleted
+  description: Event incomingCreditNote.deleted.
+- event: incomingCreditNote.refused
+  description: Event incomingCreditNote.refused.
+- event: incomingCreditNote.updated
+  description: Event incomingCreditNote.updated.
+- event: incomingInvoice.added
+  description: Event incomingInvoice.added.
+- event: incomingInvoice.approved
+  description: Event incomingInvoice.approved.
+- event: incomingInvoice.bookkeepingSubmissionFailed
+  description: Event incomingInvoice.bookkeepingSubmissionFailed.
+- event: incomingInvoice.bookkeepingSubmissionSucceeded
+  description: Event incomingInvoice.bookkeepingSubmissionSucceeded.
+- event: incomingInvoice.deleted
+  description: Event incomingInvoice.deleted.
+- event: incomingInvoice.refused
+  description: Event incomingInvoice.refused.
+- event: incomingInvoice.updated
+  description: Event incomingInvoice.updated.
+- event: invoice.booked
+  description: Event invoice.booked.
+- event: invoice.deleted
+  description: Event invoice.deleted.
+- event: invoice.drafted
+  description: Event invoice.drafted.
+- event: invoice.paymentRegistered
+  description: Event invoice.paymentRegistered.
+- event: invoice.paymentRemoved
+  description: Event invoice.paymentRemoved.
+- event: invoice.peppolSubmissionFailed
+  description: Event invoice.peppolSubmissionFailed.
+- event: invoice.peppolSubmissionSucceeded
+  description: Event invoice.peppolSubmissionSucceeded.
+- event: invoice.sent
+  description: Event invoice.sent.
+- event: invoice.updated
+  description: Event invoice.updated.
+- event: meeting.created
+  description: Event meeting.created.
+- event: meeting.completed
+  description: Event meeting.completed.
+- event: meeting.deleted
+  description: Event meeting.deleted.
+- event: meeting.updated
+  description: Event meeting.updated.
+- event: milestone.created
+  description: Event milestone.created.
+- event: milestone.updated
+  description: Event milestone.updated.
+- event: nextgenProject.created
+  description: Event nextgenProject.created.
+- event: nextgenProject.updated
+  description: Event nextgenProject.updated.
+- event: nextgenProject.closed
+  description: Event nextgenProject.closed.
+- event: nextgenProject.deleted
+  description: Event nextgenProject.deleted.
+- event: nextgenTask.completed
+  description: Event nextgenTask.completed.
+- event: nextgenTask.created
+  description: Event nextgenTask.created.
+- event: nextgenTask.deleted
+  description: Event nextgenTask.deleted.
+- event: nextgenTask.updated
+  description: Event nextgenTask.updated.
+- event: product.added
+  description: Event product.added.
+- event: product.updated
+  description: Event product.updated.
+- event: product.deleted
+  description: Event product.deleted.
+- event: project.created
+  description: Event project.created.
+- event: project.deleted
+  description: Event project.deleted.
+- event: project.updated
+  description: Event project.updated.
+- event: receipt.added
+  description: Event receipt.added.
+- event: receipt.approved
+  description: Event receipt.approved.
+- event: receipt.bookkeepingSubmissionFailed
+  description: Event receipt.bookkeepingSubmissionFailed.
+- event: receipt.bookkeepingSubmissionSucceeded
+  description: Event receipt.bookkeepingSubmissionSucceeded.
+- event: receipt.deleted
+  description: Event receipt.deleted.
+- event: receipt.refused
+  description: Event receipt.refused.
+- event: receipt.updated
+  description: Event receipt.updated.
+- event: subscription.added
+  description: Event subscription.added.
+- event: subscription.deactivated
+  description: Event subscription.deactivated.
+- event: subscription.deleted
+  description: Event subscription.deleted.
+- event: subscription.updated
+  description: Event subscription.updated.
+- event: task.completed
+  description: Event task.completed.
+- event: task.created
+  description: Event task.created.
+- event: task.deleted
+  description: Event task.deleted.
+- event: task.updated
+  description: Event task.updated.
+- event: ticket.closed
+  description: Event ticket.closed.
+- event: ticket.created
+  description: Event ticket.created.
+- event: ticket.deleted
+  description: Event ticket.deleted.
+- event: ticket.reopened
+  description: Event ticket.reopened.
+- event: ticket.updated
+  description: Event ticket.updated.
+- event: ticketMessage.added
+  description: Event ticketMessage.added.
+- event: timeTracking.added
+  description: Event timeTracking.added.
+- event: timeTracking.deleted
+  description: Event timeTracking.deleted.
+- event: timeTracking.updated
+  description: Event timeTracking.updated.
+- event: user.deactivated
+  description: Event user.deactivated.
+delivery: {}
+docs: https://developer.focus.teamleader.eu/docs/api/webhooks

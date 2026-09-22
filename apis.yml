@@ -1,23 +1,102 @@
 aid: teamleader
+
 name: Teamleader
-description: 'Teamleader is a company surfaced via the API Evangelist harvest backlog (source: crm) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.craft.cloud/019c94d2-1a0c-72a9-9aeb-fca40a9cddd3/assets/general/SEO-images/Teamleader-SEO.jpg?fit=cover&height=630&width=1200&s=qRou8Ix0kelrG98e5NrDsPf-6SZBB_wNOxzMj9zJnug
+
+description: 'Teamleader provides an integrated CRM, invoicing, quotations, and project management platform for SMEs. Its Focus product offers a unified workspace to manage customers, sales, finances, and projects, with a marketplace for extensions and robust API access for developers.'
+
 url: https://raw.githubusercontent.com/api-evangelist/teamleader/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:crm
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
-- Company
-apis: []
+- CRM
+- Invoicing
+- Project Management
+- SaaS
+- SME
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/teamleader-status-security.txt
+- type: WellKnown
+  url: well-known/teamleader-well-known.yml
+- type: TermsOfService
+  url: https://www.teamleader.eu/legal/terms-of-service-teamleader-focus
+- type: Webhooks
+  url: asyncapi/teamleader-webhooks.yml
+- type: ChangeLog
+  url: changelog/teamleader-changelog.yml
+- type: Compliance
+  url: https://www.teamleader.eu/legal/security-teamleader-focus
+- type: Security
+  url: security/teamleader-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/teamleader-llms.txt
+- type: SDKs
+  url: packages/teamleader-packages.yml
+- type: Packages
+  url: packages/teamleader-packages.yml
+- type: StatusPage
+  url: https://status.teamleader.eu/
+- type: TrustCenter
+  url: security/teamleader-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/teamleader-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/teamleader-domain-security.yml
 - type: Website
-  url: https://teamleader.eu/
+  url: https://www.teamleader.eu/
+- type: DeveloperPortal
+  url: https://developer.focus.teamleader.eu/
+- type: Documentation
+  url: https://developer.focus.teamleader.eu/docs/introduction
+- type: APIReference
+  url: https://developer.focus.teamleader.eu/docs/api
+- type: GettingStarted
+  url: https://developer.focus.teamleader.eu/docs/introduction
+- type: Support
+  url: https://support.focus.teamleader.eu/hc/en-150
+- type: Blog
+  url: https://www.teamleader.eu/blog
+- type: Pricing
+  url: https://www.teamleader.eu/pricing
+- type: PrivacyPolicy
+  url: https://www.teamleader.eu/legal/privacy-statement
+- type: SignUp
+  url: https://signup.focus.teamleader.eu/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Developer docs provide markdown but no OpenAPI or other machine-readable contract was found.
+  evidence:
+    - url: https://api.teamleader.eu/openapi.json
+      status: 404
+  checked: 2026-09-21
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
