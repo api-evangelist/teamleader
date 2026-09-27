@@ -99,15 +99,15 @@ paths:
                 $ref: '#/components/schemas/PostTicketstatusListResponse'
 components:
   schemas:
-    PostTicketstatusListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
     PostTicketstatusListResponse:
       type: object
       properties:
         data:
+          type: object
+    PostTicketstatusListRequest:
+      type: object
+      properties:
+        filter:
           type: object
   securitySchemes:
     bearer:

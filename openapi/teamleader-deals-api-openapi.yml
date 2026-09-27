@@ -233,26 +233,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostDealsListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        includes:
-          type: string
-          description: Comma-separated list of optional includes
-      required:
-      - id
     PostDealsUpdateRequest:
       type: object
       properties:
@@ -286,17 +266,6 @@ components:
           type: string
       required:
       - id
-    PostDealsLoseRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        reason_id:
-          type: string
-        extra_info:
-          type: string
-      required:
-      - id
     PostDealsWinRequest:
       type: object
       properties:
@@ -304,16 +273,18 @@ components:
           type: string
       required:
       - id
-    PostDealsMoveRequest:
+    PostDealsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsDeleteRequest:
       type: object
       properties:
         id:
           type: string
-        phase_id:
-          type: string
       required:
       - id
-      - phase_id
     PostDealsCreateRequest:
       type: object
       properties:
@@ -351,10 +322,39 @@ components:
       required:
       - lead
       - title
-    PostDealsDeleteRequest:
+    PostDealsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsMoveRequest:
       type: object
       properties:
         id:
+          type: string
+        phase_id:
+          type: string
+      required:
+      - id
+      - phase_id
+    PostDealsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: Comma-separated list of optional includes
+      required:
+      - id
+    PostDealsLoseRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        reason_id:
+          type: string
+        extra_info:
           type: string
       required:
       - id

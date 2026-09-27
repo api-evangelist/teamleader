@@ -175,18 +175,6 @@ paths:
                 $ref: '#/components/schemas/PostFilesUploadResponse'
 components:
   schemas:
-    PostFilesDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostFilesInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
     PostFilesUploadRequest:
       type: object
       properties:
@@ -201,7 +189,21 @@ components:
       required:
       - name
       - subject
-    PostFilesDownloadResponse:
+    PostFilesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesDownloadRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesUploadResponse:
       type: object
       properties:
         data:
@@ -218,14 +220,19 @@ components:
       required:
       - filter
       - page
-    PostFilesInfoRequest:
+    PostFilesDeleteRequest:
       type: object
       properties:
         id:
           type: string
       required:
       - id
-    PostFilesUploadResponse:
+    PostFilesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesDownloadResponse:
       type: object
       properties:
         data:
@@ -235,13 +242,6 @@ components:
       properties:
         data:
           type: object
-    PostFilesDownloadRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
   securitySchemes:
     bearer:
       type: http

@@ -99,17 +99,17 @@ paths:
                 $ref: '#/components/schemas/PostPaymentmethodsListResponse'
 components:
   schemas:
+    PostPaymentmethodsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostPaymentmethodsListRequest:
       type: object
       properties:
         filter:
           type: object
         page:
-          type: object
-    PostPaymentmethodsListResponse:
-      type: object
-      properties:
-        data:
           type: object
   securitySchemes:
     bearer:

@@ -19,7 +19,7 @@ tags:
 - Invoicing
 - Project Management
 - Software-as-a-Service
-- SME
+- Small Business
 tags_raw:
 - CRM
 - Invoicing
@@ -191,6 +191,8 @@ apis:
   humanURL: https://developer.focus.teamleader.eu/docs/authentication
   baseURL: https://api.focus.teamleader.eu
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -279,6 +281,8 @@ apis:
   humanURL: https://developer.focus.teamleader.eu/docs/authentication
   baseURL: https://api.focus.teamleader.eu
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -301,6 +305,8 @@ apis:
   humanURL: https://developer.focus.teamleader.eu/docs/authentication
   baseURL: https://api.focus.teamleader.eu
   tags:
+  - Ticketing
+  tags_raw:
   - Tickets
   properties:
   - type: OpenAPI
