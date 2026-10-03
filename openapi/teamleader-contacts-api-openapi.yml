@@ -289,20 +289,25 @@ components:
           type: object
         includes:
           type: string
-    PostContactsLinktocompanyRequest:
+    PostContactsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsInfoRequest:
       type: object
       properties:
         id:
           type: string
-        company_id:
-          type: string
-        position:
-          type: string
-        decision_maker:
-          type: boolean
       required:
       - id
-      - company_id
+    PostContactsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
     PostContactsUntagRequest:
       type: object
       properties:
@@ -313,37 +318,17 @@ components:
       required:
       - id
       - tags
-    PostContactsInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostContactsDeleteRequest:
+    PostContactsUploadavatarRequest:
       type: object
       properties:
         id:
           type: string
+        image:
+          type: string
+          description: Use null to remove the avatar
       required:
       - id
-    PostContactsUpdatecompanylinkRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        company_id:
-          type: string
-        position:
-          type: string
-        decision_maker:
-          type: boolean
-      required:
-      - id
-      - company_id
-    PostContactsAddResponse:
-      type: object
-      properties:
-        data:
-          type: object
+      - image
     PostContactsUpdateRequest:
       type: object
       properties:
@@ -361,49 +346,6 @@ components:
           description: Strategy for updating custom fields; use 'partial' for partial updates
       required:
       - id
-    PostContactsInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostContactsUnlinkfromcompanyRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        company_id:
-          type: string
-      required:
-      - id
-      - company_id
-    PostContactsTagRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        tags:
-          type: string
-      required:
-      - id
-      - tags
-    PostContactsListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostContactsUploadavatarRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        image:
-          type: string
-          description: Use null to remove the avatar
-      required:
-      - id
-      - image
     PostContactsAddRequest:
       type: object
       properties:
@@ -447,6 +389,59 @@ components:
       required:
       - first_name
       - last_name
+    PostContactsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsUnlinkfromcompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+      required:
+      - id
+      - company_id
+    PostContactsLinktocompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+        position:
+          type: string
+        decision_maker:
+          type: boolean
+      required:
+      - id
+      - company_id
+    PostContactsTagRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        tags:
+          type: string
+      required:
+      - id
+      - tags
+    PostContactsUpdatecompanylinkRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+        position:
+          type: string
+        decision_maker:
+          type: boolean
+      required:
+      - id
+      - company_id
     PostContactsUpdateResponse:
       type: object
       properties:
@@ -456,6 +451,11 @@ components:
         id:
           type: string
           description: The ID of the updated contact
+    PostContactsAddResponse:
+      type: object
+      properties:
+        data:
+          type: object
   securitySchemes:
     bearer:
       type: http
