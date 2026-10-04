@@ -223,6 +223,24 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
+    PostTasksScheduleResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksScheduleRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        starts_at:
+          type: string
+        ends_at:
+          type: string
+      required:
+      - id
+      - starts_at
+      - ends_at
     PostTasksReopenRequest:
       type: object
       properties:
@@ -230,10 +248,40 @@ components:
           type: string
       required:
       - id
-    PostTasksInfoResponse:
+    PostTasksCreateResponse:
       type: object
       properties:
         data:
+          type: object
+    PostTasksDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksCompleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostTasksListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
           type: object
     PostTasksCreateRequest:
       type: object
@@ -268,13 +316,16 @@ components:
       - title
       - description
       - work_type_id
-    PostTasksInfoRequest:
+    PostTasksInfoResponse:
       type: object
       properties:
-        id:
-          type: string
-      required:
-      - id
+        data:
+          type: object
+    PostTasksListResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostTasksUpdateRequest:
       type: object
       properties:
@@ -306,57 +357,6 @@ components:
           type: object
       required:
       - id
-    PostTasksScheduleResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksCompleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostTasksScheduleRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        starts_at:
-          type: string
-        ends_at:
-          type: string
-      required:
-      - id
-      - starts_at
-      - ends_at
-    PostTasksCreateResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostTasksListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-        page:
-          type: object
-        sort:
-          type: object
   securitySchemes:
     bearer:
       type: http

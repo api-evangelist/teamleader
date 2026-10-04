@@ -175,49 +175,6 @@ paths:
                 $ref: '#/components/schemas/PostFilesUploadResponse'
 components:
   schemas:
-    PostFilesInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostFilesInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostFilesDownloadResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostFilesUploadResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostFilesDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostFilesUploadRequest:
-      type: object
-      properties:
-        name:
-          type: string
-          description: Name under which the file will be stored. This name should contain the same extension as the file that the user wants to upload.
-        subject:
-          type: object
-        folder:
-          type: string
-          description: Name of a folder under which the file will be stored. Defaults to General in account's language if not passed.
-      required:
-      - name
-      - subject
     PostFilesDownloadRequest:
       type: object
       properties:
@@ -225,7 +182,7 @@ components:
           type: string
       required:
       - id
-    PostFilesListResponse:
+    PostFilesUploadResponse:
       type: object
       properties:
         data:
@@ -242,6 +199,49 @@ components:
       required:
       - filter
       - page
+    PostFilesUploadRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name under which the file will be stored. This name should contain the same extension as the file that the user wants to upload.
+        subject:
+          type: object
+        folder:
+          type: string
+          description: Name of a folder under which the file will be stored. Defaults to General in account's language if not passed.
+      required:
+      - name
+      - subject
+    PostFilesDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostFilesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesDownloadResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostFilesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
   securitySchemes:
     bearer:
       type: http

@@ -233,101 +233,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostDealsCreateResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsMoveRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        phase_id:
-          type: string
-      required:
-      - id
-      - phase_id
-    PostDealsLoseRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        reason_id:
-          type: string
-        extra_info:
-          type: string
-      required:
-      - id
-    PostDealsUpdateRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        lead:
-          type: object
-        title:
-          type: string
-        summary:
-          type: string
-        source_id:
-          type: string
-        department_id:
-          type: string
-        responsible_user_id:
-          type: string
-        second_responsible_user_id:
-          type: string
-        estimated_value:
-          type: object
-        estimated_probability:
-          type: number
-        estimated_closing_date:
-          type: string
-        custom_fields:
-          type: object
-        currency:
-          type: object
-        purchase_order_number:
-          type: string
-      required:
-      - id
-    PostDealsInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsWinRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostDealsListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        includes:
-          type: string
-          description: Comma-separated list of optional includes
-      required:
-      - id
-    PostDealsListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-        page:
-          type: object
-        sort:
-          type: object
     PostDealsCreateRequest:
       type: object
       properties:
@@ -365,6 +270,38 @@ components:
       required:
       - lead
       - title
+    PostDealsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: Comma-separated list of optional includes
+      required:
+      - id
+    PostDealsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostDealsWinRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
     PostDealsDeleteRequest:
       type: object
       properties:
@@ -372,6 +309,69 @@ components:
           type: string
       required:
       - id
+    PostDealsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostDealsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        lead:
+          type: object
+        title:
+          type: string
+        summary:
+          type: string
+        source_id:
+          type: string
+        department_id:
+          type: string
+        responsible_user_id:
+          type: string
+        second_responsible_user_id:
+          type: string
+        estimated_value:
+          type: object
+        estimated_probability:
+          type: number
+        estimated_closing_date:
+          type: string
+        custom_fields:
+          type: object
+        currency:
+          type: object
+        purchase_order_number:
+          type: string
+      required:
+      - id
+    PostDealsLoseRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        reason_id:
+          type: string
+        extra_info:
+          type: string
+      required:
+      - id
+    PostDealsMoveRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        phase_id:
+          type: string
+      required:
+      - id
+      - phase_id
   securitySchemes:
     bearer:
       type: http

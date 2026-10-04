@@ -255,33 +255,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostTicketsAddreplyRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        body:
-          type: string
-          description: Uses HTML formatting
-        ticket_status_id:
-          type: string
-        attachments:
-          type: string
-          description: All files must have the ticket as a subject
-      required:
-      - id
-      - body
-    PostTicketsListmessagesRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        filter:
-          type: object
-        page:
-          type: object
-      required:
-      - id
     PostTicketsGetmessageRequest:
       type: object
       properties:
@@ -289,17 +262,32 @@ components:
           type: string
       required:
       - message_id
+    PostTicketsUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        subject:
+          type: string
+        description:
+          type: string
+        ticket_status_id:
+          type: string
+        customer:
+          type: object
+        assignee:
+          type: object
+        participant:
+          type: object
+        custom_fields:
+          type: object
+        milestone_id:
+          type: string
+        project_id:
+          type: string
+      required:
+      - id
     PostTicketsAddinternalmessageResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTicketsImportmessageResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTicketsListResponse:
       type: object
       properties:
         data:
@@ -324,15 +312,57 @@ components:
       - body
       - sent_by
       - sent_at
-    PostTicketsCreateResponse:
+    PostTicketsImportmessageResponse:
       type: object
       properties:
         data:
           type: object
-    PostTicketsAddreplyResponse:
+    PostTicketsAddreplyRequest:
       type: object
       properties:
-        data:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+    PostTicketsInfoResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        reference:
+          type: number
+        subject:
+          type: string
+        status:
+          type: object
+        assignee:
+          type: object
+        created_at:
+          type: string
+        closed_at:
+          type: string
+        customer:
+          type: object
+        participant:
+          type: object
+        last_message_at:
+          type: string
+        description:
+          type: string
+        project:
+          type: object
+        milestone:
+          type: object
+        custom_fields:
           type: object
     PostTicketsCreateRequest:
       type: object
@@ -365,13 +395,6 @@ components:
       - subject
       - customer
       - ticket_status_id
-    PostTicketsListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-        page:
-          type: object
     PostTicketsListmessagesResponse:
       type: object
       properties:
@@ -379,61 +402,22 @@ components:
           type: object
         meta:
           type: object
-    PostTicketsUpdateRequest:
+    PostTicketsAddreplyResponse:
       type: object
       properties:
-        id:
-          type: string
-        subject:
-          type: string
-        description:
-          type: string
-        ticket_status_id:
-          type: string
-        customer:
+        data:
           type: object
-        assignee:
-          type: object
-        participant:
-          type: object
-        custom_fields:
-          type: object
-        milestone_id:
-          type: string
-        project_id:
-          type: string
-      required:
-      - id
-    PostTicketsInfoResponse:
+    PostTicketsListRequest:
       type: object
       properties:
-        id:
-          type: string
-        reference:
-          type: number
-        subject:
-          type: string
-        status:
+        filter:
           type: object
-        assignee:
+        page:
           type: object
-        created_at:
-          type: string
-        closed_at:
-          type: string
-        customer:
-          type: object
-        participant:
-          type: object
-        last_message_at:
-          type: string
-        description:
-          type: string
-        project:
-          type: object
-        milestone:
-          type: object
-        custom_fields:
+    PostTicketsListResponse:
+      type: object
+      properties:
+        data:
           type: object
     PostTicketsAddinternalmessageRequest:
       type: object
@@ -470,6 +454,22 @@ components:
           type: object
         type:
           type: string
+    PostTicketsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsListmessagesRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        filter:
+          type: object
+        page:
+          type: object
+      required:
+      - id
     PostTicketsInfoRequest:
       type: object
       properties:

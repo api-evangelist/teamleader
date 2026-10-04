@@ -99,13 +99,6 @@ paths:
                 $ref: '#/components/schemas/PostExpensesListResponse'
 components:
   schemas:
-    PostExpensesListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-        meta:
-          type: object
     PostExpensesListRequest:
       type: object
       properties:
@@ -114,6 +107,13 @@ components:
         page:
           type: object
         sort:
+          type: object
+    PostExpensesListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+        meta:
           type: object
   securitySchemes:
     bearer:

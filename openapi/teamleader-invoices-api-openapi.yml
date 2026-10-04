@@ -257,11 +257,43 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostInvoicesCopyRequest:
+    PostInvoicesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesDownloadResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesBookRequest:
       type: object
       properties:
         id:
           type: string
+        'on':
+          type: string
+      required:
+      - id
+      - 'on'
+    PostInvoicesListRequest:
+      type: object
+      properties:
+        filter:
+          type: string
+          description: Filter object with department_id and other criteria
+        page:
+          type: string
+          description: Page object with size and number properties
+    PostInvoicesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: when used, the response will include totals.due_incasso_inclusive, totals.fixed_late_fee and totals.interest
       required:
       - id
     PostInvoicesDeleteRequest:
@@ -271,83 +303,17 @@ components:
           type: string
       required:
       - id
-    PostInvoicesListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          description: Array of invoice objects
-        meta:
-          type: object
-          description: Pagination metadata including page and matches
-    PostInvoicesUpdatebookedRequest:
+    PostInvoicesDownloadRequest:
       type: object
       properties:
         id:
           type: string
-        invoicee:
-          type: object
-        payment_term:
-          type: object
-        project_id:
+        format:
           type: string
-        grouped_lines:
-          type: object
-        invoice_date:
-          type: string
-        note:
-          type: string
-        invoice_content:
-          type: string
-          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
-        expected_payment_method:
-          type: object
-        custom_fields:
-          type: object
+          description: 'Possible values: [pdf, ubl/e-fff, ubl/peppol_bis_3, ubl/xrechnung]'
       required:
       - id
-    PostInvoicesUpdateRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        invoicee:
-          type: object
-        payment_term:
-          type: object
-        currency:
-          type: object
-        project_id:
-          type: string
-        purchase_order_number:
-          type: string
-        grouped_lines:
-          type: object
-        invoice_date:
-          type: string
-        note:
-          type: string
-          description: This is the remarks field
-        invoice_content:
-          type: string
-          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
-        discounts:
-          type: object
-        expected_payment_method:
-          type: object
-        custom_fields:
-          type: object
-        document_template_id:
-          type: string
-        delivery_date:
-          type: string
-      required:
-      - id
-    PostInvoicesCopyResponse:
-      type: object
-      properties:
-        data:
-          type: object
+      - format
     PostInvoicesDraftRequest:
       type: object
       properties:
@@ -391,57 +357,91 @@ components:
       - department_id
       - payment_term
       - grouped_lines
-    PostInvoicesInfoResponse:
+    PostInvoicesListResponse:
       type: object
       properties:
         data:
+          type: array
+          description: Array of invoice objects
+        meta:
           type: object
-    PostInvoicesBookRequest:
+          description: Pagination metadata including page and matches
+    PostInvoicesUpdateRequest:
       type: object
       properties:
         id:
           type: string
-        'on':
+        invoicee:
+          type: object
+        payment_term:
+          type: object
+        currency:
+          type: object
+        project_id:
+          type: string
+        purchase_order_number:
+          type: string
+        grouped_lines:
+          type: object
+        invoice_date:
+          type: string
+        note:
+          type: string
+          description: This is the remarks field
+        invoice_content:
+          type: string
+          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
+        discounts:
+          type: object
+        expected_payment_method:
+          type: object
+        custom_fields:
+          type: object
+        document_template_id:
+          type: string
+        delivery_date:
           type: string
       required:
       - id
-      - 'on'
-    PostInvoicesListRequest:
+    PostInvoicesUpdatebookedRequest:
       type: object
       properties:
-        filter:
+        id:
           type: string
-          description: Filter object with department_id and other criteria
-        page:
+        invoicee:
+          type: object
+        payment_term:
+          type: object
+        project_id:
           type: string
-          description: Page object with size and number properties
+        grouped_lines:
+          type: object
+        invoice_date:
+          type: string
+        note:
+          type: string
+        invoice_content:
+          type: string
+          description: Whether the invoice is for goods, services, or both. Required when the department and the customer's invoicing address are both in France and the account sends invoices via Peppol from France. Cleared otherwise.
+        expected_payment_method:
+          type: object
+        custom_fields:
+          type: object
+      required:
+      - id
     PostInvoicesDraftResponse:
       type: object
       properties:
         data:
           type: object
-    PostInvoicesInfoRequest:
+    PostInvoicesCopyRequest:
       type: object
       properties:
         id:
           type: string
-        includes:
-          type: string
-          description: when used, the response will include totals.due_incasso_inclusive, totals.fixed_late_fee and totals.interest
       required:
       - id
-    PostInvoicesDownloadRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        format:
-          type: string
-          description: 'Possible values: [pdf, ubl/e-fff, ubl/peppol_bis_3, ubl/xrechnung]'
-      required:
-      - id
-      - format
-    PostInvoicesDownloadResponse:
+    PostInvoicesCopyResponse:
       type: object
       properties:
         data:

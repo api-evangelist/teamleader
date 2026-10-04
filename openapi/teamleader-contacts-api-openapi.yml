@@ -278,46 +278,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostContactsListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-        page:
-          type: object
-        sort:
-          type: object
-        includes:
-          type: string
-    PostContactsInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostContactsInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostContactsDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostContactsUntagRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        tags:
-          type: string
-      required:
-      - id
-      - tags
     PostContactsUploadavatarRequest:
       type: object
       properties:
@@ -329,6 +289,21 @@ components:
       required:
       - id
       - image
+    PostContactsAddResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsUnlinkfromcompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+      required:
+      - id
+      - company_id
     PostContactsUpdateRequest:
       type: object
       properties:
@@ -389,35 +364,16 @@ components:
       required:
       - first_name
       - last_name
-    PostContactsListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostContactsUnlinkfromcompanyRequest:
+    PostContactsUntagRequest:
       type: object
       properties:
         id:
           type: string
-        company_id:
+        tags:
           type: string
       required:
       - id
-      - company_id
-    PostContactsLinktocompanyRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        company_id:
-          type: string
-        position:
-          type: string
-        decision_maker:
-          type: boolean
-      required:
-      - id
-      - company_id
+      - tags
     PostContactsTagRequest:
       type: object
       properties:
@@ -428,6 +384,18 @@ components:
       required:
       - id
       - tags
+    PostContactsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostContactsInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
     PostContactsUpdatecompanylinkRequest:
       type: object
       properties:
@@ -451,11 +419,43 @@ components:
         id:
           type: string
           description: The ID of the updated contact
-    PostContactsAddResponse:
+    PostContactsInfoResponse:
       type: object
       properties:
         data:
           type: object
+    PostContactsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
+    PostContactsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+        includes:
+          type: string
+    PostContactsLinktocompanyRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        company_id:
+          type: string
+        position:
+          type: string
+        decision_maker:
+          type: boolean
+      required:
+      - id
+      - company_id
   securitySchemes:
     bearer:
       type: http
