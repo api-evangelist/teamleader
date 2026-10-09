@@ -1,16 +1,23 @@
-generated: '2026-09-22'
+generated: '2026-09-23'
 method: generated
-source: openapi/teamleader-openapi-generated.yml
+source: openapi/teamleader-contacts-api-openapi.yml, openapi/teamleader-daysoff-api-openapi.yml,
+  openapi/teamleader-deals-api-openapi.yml, openapi/teamleader-expenses-api-openapi.yml, openapi/teamleader-files-api-openapi.yml,
+  openapi/teamleader-invoices-api-openapi.yml, openapi/teamleader-leveltwoareas-api-openapi.yml,
+  openapi/teamleader-lostreasons-api-openapi.yml, openapi/teamleader-payment-methods-api-openapi.yml,
+  openapi/teamleader-tasks-api-openapi.yml, openapi/teamleader-tickets-api-openapi.yml, openapi/teamleader-ticketstatus-api-openapi.yml,
+  openapi/teamleader-timers-api-openapi.yml, openapi/teamleader-useravailability-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 58
   by_action_class:
-    acting: 58
+    acting: 43
+    connected: 15
   by_consequence:
-    write: 48
-    physical: 10
+    write: 35
+    read: 15
+    physical: 8
   human_in_the_loop_required: 0
 operations:
 - path: /contacts.add
@@ -49,18 +56,12 @@ operations:
   method: post
   operationId: post_contacts_info
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /contacts.linkToCompany
   method: post
   operationId: post_contacts_linkToCompany
@@ -81,18 +82,12 @@ operations:
   method: post
   operationId: post_contacts_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /contacts.tag
   method: post
   operationId: post_contacts_tag
@@ -241,34 +236,22 @@ operations:
   method: post
   operationId: post_deals_info
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /deals.list
   method: post
   operationId: post_deals_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /deals.lose
   method: post
   operationId: post_deals_lose
@@ -337,18 +320,12 @@ operations:
   method: post
   operationId: post_expenses_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /files.delete
   method: post
   operationId: post_files_delete
@@ -385,34 +362,22 @@ operations:
   method: post
   operationId: post_files_info
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /files.list
   method: post
   operationId: post_files_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /files.upload
   method: post
   operationId: post_files_upload
@@ -523,20 +488,12 @@ operations:
   method: post
   operationId: post_invoices_info
   x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /invoices.list
   method: post
   operationId: post_invoices_list
@@ -611,36 +568,22 @@ operations:
   method: post
   operationId: post_lostReasons_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /paymentMethods.list
   method: post
   operationId: post_paymentMethods_list
   x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /tasks.complete
   method: post
   operationId: post_tasks_complete
@@ -693,34 +636,22 @@ operations:
   method: post
   operationId: post_tasks_info
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /tasks.list
   method: post
   operationId: post_tasks_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /tasks.reopen
   method: post
   operationId: post_tasks_reopen
@@ -756,22 +687,6 @@ operations:
 - path: /tasks.update
   method: post
   operationId: post_tasks_update
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /ticketStatus.list
-  method: post
-  operationId: post_ticketStatus_list
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -869,34 +784,22 @@ operations:
   method: post
   operationId: post_tickets_info
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /tickets.list
   method: post
   operationId: post_tickets_list
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /tickets.listMessages
   method: post
   operationId: post_tickets_listMessages
@@ -929,6 +832,16 @@ operations:
       - abnormal
       - high-value
     audit: required
+- path: /ticketStatus.list
+  method: post
+  operationId: post_ticketStatus_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /timers.update
   method: post
   operationId: post_timers_update
