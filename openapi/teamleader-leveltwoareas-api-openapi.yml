@@ -99,6 +99,11 @@ paths:
                 $ref: '#/components/schemas/PostLeveltwoareasListResponse'
 components:
   schemas:
+    PostLeveltwoareasListResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostLeveltwoareasListRequest:
       type: object
       properties:
@@ -109,11 +114,6 @@ components:
           description: if not passed, the name is returned in the primary language of the country
       required:
       - country
-    PostLeveltwoareasListResponse:
-      type: object
-      properties:
-        data:
-          type: object
   securitySchemes:
     bearer:
       type: http

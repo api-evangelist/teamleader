@@ -99,6 +99,11 @@ paths:
                 $ref: '#/components/schemas/PostLostreasonsListResponse'
 components:
   schemas:
+    PostLostreasonsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostLostreasonsListRequest:
       type: object
       properties:
@@ -107,11 +112,6 @@ components:
         page:
           type: object
         sort:
-          type: object
-    PostLostreasonsListResponse:
-      type: object
-      properties:
-        data:
           type: object
   securitySchemes:
     bearer:

@@ -233,6 +233,11 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
+    PostDealsInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostDealsCreateRequest:
       type: object
       properties:
@@ -270,12 +275,17 @@ components:
       required:
       - lead
       - title
-    PostDealsListResponse:
+    PostDealsMoveRequest:
       type: object
       properties:
-        data:
-          type: object
-    PostDealsCreateResponse:
+        id:
+          type: string
+        phase_id:
+          type: string
+      required:
+      - id
+      - phase_id
+    PostDealsListResponse:
       type: object
       properties:
         data:
@@ -290,34 +300,6 @@ components:
           description: Comma-separated list of optional includes
       required:
       - id
-    PostDealsInfoResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostDealsWinRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostDealsDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostDealsListRequest:
-      type: object
-      properties:
-        filter:
-          type: object
-        page:
-          type: object
-        sort:
-          type: object
     PostDealsUpdateRequest:
       type: object
       properties:
@@ -351,6 +333,13 @@ components:
           type: string
       required:
       - id
+    PostDealsDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
     PostDealsLoseRequest:
       type: object
       properties:
@@ -362,16 +351,27 @@ components:
           type: string
       required:
       - id
-    PostDealsMoveRequest:
+    PostDealsWinRequest:
       type: object
       properties:
         id:
           type: string
-        phase_id:
-          type: string
       required:
       - id
-      - phase_id
+    PostDealsListRequest:
+      type: object
+      properties:
+        filter:
+          type: object
+        page:
+          type: object
+        sort:
+          type: object
+    PostDealsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
   securitySchemes:
     bearer:
       type: http

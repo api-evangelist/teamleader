@@ -255,6 +255,72 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
+    PostTicketsGetmessageResponse:
+      type: object
+      properties:
+        message_id:
+          type: string
+        body:
+          type: string
+        raw_body:
+          type: string
+        created_at:
+          type: string
+        sent_by:
+          type: object
+        ticket:
+          type: object
+        attachments:
+          type: object
+        type:
+          type: string
+    PostTicketsListmessagesRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        filter:
+          type: object
+        page:
+          type: object
+      required:
+      - id
+    PostTicketsImportmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsCreateRequest:
+      type: object
+      properties:
+        subject:
+          type: string
+        customer:
+          type: object
+        ticket_status_id:
+          type: string
+        assignee:
+          type: object
+        custom_fields:
+          type: object
+        description:
+          type: string
+          description: Uses Markdown formatting
+        participant:
+          type: object
+        initial_reply:
+          type: string
+          description: 'Create & send an initial autoreply according to configuration (default: automatic). Possible values: [automatic, disabled]'
+        milestone_id:
+          type: string
+          description: Links the ticket to a milestone. Only applicable to accounts using legacy projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
+        project_id:
+          type: string
+          description: Links the ticket to a project. Only applicable to accounts using the new projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
+      required:
+      - subject
+      - customer
+      - ticket_status_id
     PostTicketsGetmessageRequest:
       type: object
       properties:
@@ -262,6 +328,57 @@ components:
           type: string
       required:
       - message_id
+    PostTicketsListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsImportmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        sent_by:
+          type: object
+        sent_at:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
+      - sent_by
+      - sent_at
+    PostTicketsAddinternalmessageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTicketsAddinternalmessageRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        body:
+          type: string
+          description: Uses HTML formatting
+        ticket_status_id:
+          type: string
+        attachments:
+          type: string
+          description: All files must have the ticket as a subject
+      required:
+      - id
+      - body
     PostTicketsUpdateRequest:
       type: object
       properties:
@@ -287,36 +404,13 @@ components:
           type: string
       required:
       - id
-    PostTicketsAddinternalmessageResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTicketsImportmessageRequest:
+    PostTicketsInfoRequest:
       type: object
       properties:
         id:
           type: string
-        body:
-          type: string
-          description: Uses HTML formatting
-        sent_by:
-          type: object
-        sent_at:
-          type: string
-        attachments:
-          type: string
-          description: All files must have the ticket as a subject
       required:
       - id
-      - body
-      - sent_by
-      - sent_at
-    PostTicketsImportmessageResponse:
-      type: object
-      properties:
-        data:
-          type: object
     PostTicketsAddreplyRequest:
       type: object
       properties:
@@ -364,37 +458,6 @@ components:
           type: object
         custom_fields:
           type: object
-    PostTicketsCreateRequest:
-      type: object
-      properties:
-        subject:
-          type: string
-        customer:
-          type: object
-        ticket_status_id:
-          type: string
-        assignee:
-          type: object
-        custom_fields:
-          type: object
-        description:
-          type: string
-          description: Uses Markdown formatting
-        participant:
-          type: object
-        initial_reply:
-          type: string
-          description: 'Create & send an initial autoreply according to configuration (default: automatic). Possible values: [automatic, disabled]'
-        milestone_id:
-          type: string
-          description: Links the ticket to a milestone. Only applicable to accounts using legacy projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
-        project_id:
-          type: string
-          description: Links the ticket to a project. Only applicable to accounts using the new projects. A ticket can be linked to either a milestone_id or a project_id, but not both.
-      required:
-      - subject
-      - customer
-      - ticket_status_id
     PostTicketsListmessagesResponse:
       type: object
       properties:
@@ -414,69 +477,6 @@ components:
           type: object
         page:
           type: object
-    PostTicketsListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTicketsAddinternalmessageRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        body:
-          type: string
-          description: Uses HTML formatting
-        ticket_status_id:
-          type: string
-        attachments:
-          type: string
-          description: All files must have the ticket as a subject
-      required:
-      - id
-      - body
-    PostTicketsGetmessageResponse:
-      type: object
-      properties:
-        message_id:
-          type: string
-        body:
-          type: string
-        raw_body:
-          type: string
-        created_at:
-          type: string
-        sent_by:
-          type: object
-        ticket:
-          type: object
-        attachments:
-          type: object
-        type:
-          type: string
-    PostTicketsCreateResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTicketsListmessagesRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        filter:
-          type: object
-        page:
-          type: object
-      required:
-      - id
-    PostTicketsInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
   securitySchemes:
     bearer:
       type: http

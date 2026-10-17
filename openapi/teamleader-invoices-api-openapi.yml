@@ -257,52 +257,15 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostInvoicesInfoResponse:
+    PostInvoicesListResponse:
       type: object
       properties:
         data:
+          type: array
+          description: Array of invoice objects
+        meta:
           type: object
-    PostInvoicesDownloadResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostInvoicesBookRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        'on':
-          type: string
-      required:
-      - id
-      - 'on'
-    PostInvoicesListRequest:
-      type: object
-      properties:
-        filter:
-          type: string
-          description: Filter object with department_id and other criteria
-        page:
-          type: string
-          description: Page object with size and number properties
-    PostInvoicesInfoRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        includes:
-          type: string
-          description: when used, the response will include totals.due_incasso_inclusive, totals.fixed_late_fee and totals.interest
-      required:
-      - id
-    PostInvoicesDeleteRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
+          description: Pagination metadata including page and matches
     PostInvoicesDownloadRequest:
       type: object
       properties:
@@ -357,15 +320,40 @@ components:
       - department_id
       - payment_term
       - grouped_lines
-    PostInvoicesListResponse:
+    PostInvoicesDownloadResponse:
       type: object
       properties:
         data:
-          type: array
-          description: Array of invoice objects
-        meta:
           type: object
-          description: Pagination metadata including page and matches
+    PostInvoicesBookRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        'on':
+          type: string
+      required:
+      - id
+      - 'on'
+    PostInvoicesDraftResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesInfoResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesListRequest:
+      type: object
+      properties:
+        filter:
+          type: string
+          description: Filter object with department_id and other criteria
+        page:
+          type: string
+          description: Page object with size and number properties
     PostInvoicesUpdateRequest:
       type: object
       properties:
@@ -403,6 +391,21 @@ components:
           type: string
       required:
       - id
+    PostInvoicesCopyResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostInvoicesInfoRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        includes:
+          type: string
+          description: when used, the response will include totals.due_incasso_inclusive, totals.fixed_late_fee and totals.interest
+      required:
+      - id
     PostInvoicesUpdatebookedRequest:
       type: object
       properties:
@@ -429,11 +432,13 @@ components:
           type: object
       required:
       - id
-    PostInvoicesDraftResponse:
+    PostInvoicesDeleteRequest:
       type: object
       properties:
-        data:
-          type: object
+        id:
+          type: string
+      required:
+      - id
     PostInvoicesCopyRequest:
       type: object
       properties:
@@ -441,11 +446,6 @@ components:
           type: string
       required:
       - id
-    PostInvoicesCopyResponse:
-      type: object
-      properties:
-        data:
-          type: object
   securitySchemes:
     bearer:
       type: http

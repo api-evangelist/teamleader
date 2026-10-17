@@ -223,37 +223,7 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PostTasksScheduleResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksScheduleRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        starts_at:
-          type: string
-        ends_at:
-          type: string
-      required:
-      - id
-      - starts_at
-      - ends_at
     PostTasksReopenRequest:
-      type: object
-      properties:
-        id:
-          type: string
-      required:
-      - id
-    PostTasksCreateResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksDeleteRequest:
       type: object
       properties:
         id:
@@ -267,6 +237,19 @@ components:
           type: string
       required:
       - id
+    PostTasksScheduleRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        starts_at:
+          type: string
+        ends_at:
+          type: string
+      required:
+      - id
+      - starts_at
+      - ends_at
     PostTasksCompleteRequest:
       type: object
       properties:
@@ -274,6 +257,21 @@ components:
           type: string
       required:
       - id
+    PostTasksListResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksScheduleResponse:
+      type: object
+      properties:
+        data:
+          type: object
+    PostTasksCreateResponse:
+      type: object
+      properties:
+        data:
+          type: object
     PostTasksListRequest:
       type: object
       properties:
@@ -283,6 +281,37 @@ components:
           type: object
         sort:
           type: object
+    PostTasksUpdateRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        due_on:
+          type: string
+        work_type_id:
+          type: string
+        milestone_id:
+          type: string
+        project_id:
+          type: string
+        deal_id:
+          type: string
+        ticket_id:
+          type: string
+        estimated_duration:
+          type: object
+        assignee:
+          type: object
+        customer:
+          type: object
+        custom_fields:
+          type: object
+      required:
+      - id
     PostTasksCreateRequest:
       type: object
       properties:
@@ -316,47 +345,18 @@ components:
       - title
       - description
       - work_type_id
+    PostTasksDeleteRequest:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+      - id
     PostTasksInfoResponse:
       type: object
       properties:
         data:
           type: object
-    PostTasksListResponse:
-      type: object
-      properties:
-        data:
-          type: object
-    PostTasksUpdateRequest:
-      type: object
-      properties:
-        id:
-          type: string
-        title:
-          type: string
-        description:
-          type: string
-        due_on:
-          type: string
-        work_type_id:
-          type: string
-        milestone_id:
-          type: string
-        project_id:
-          type: string
-        deal_id:
-          type: string
-        ticket_id:
-          type: string
-        estimated_duration:
-          type: object
-        assignee:
-          type: object
-        customer:
-          type: object
-        custom_fields:
-          type: object
-      required:
-      - id
   securitySchemes:
     bearer:
       type: http
