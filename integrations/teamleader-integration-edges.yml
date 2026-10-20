@@ -8,6 +8,7 @@ source:
 checked:
 - https://composio.dev/toolkits/teamleader
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+- https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/
 - https://monid.ai/tools/teamleader
 - https://n8n.io/integrations/teamleader/
 - https://peppol.org/members/peppol-certified-service-providers/
@@ -47,7 +48,7 @@ edges:
     signal_note: certified_products = one entry per Peppol-certified SERVICE (Access Point, SMP); authorities and
       countries are context, never read
     detected_by: sweep-einvoicing-tax.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-einvoicing-tax.py
   first_seen: '2026-10-15'
 - partner_name: OpenPeppol (certified service providers)
@@ -71,7 +72,7 @@ edges:
     registered_name: Teamleader NV
     matched_domain: teamleader.eu
     detected_by: sweep-einvoicing-tax.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-einvoicing-tax.py
   first_seen: '2026-10-15'
 - partner_name: Zapier
@@ -107,7 +108,7 @@ edges:
   channel: open-source-node
   relationship: ipaas-bridge
   direction: third-party
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/teamleader_focus
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/teamleader_focus
   category: null
   contract_reference:
     register: Pipedream components (PipedreamHQ/pipedream components/)

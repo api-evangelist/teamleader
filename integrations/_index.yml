@@ -32,7 +32,7 @@
     signal_note: certified_products = one entry per Peppol-certified SERVICE (Access Point, SMP); authorities and
       countries are context, never read
     detected_by: sweep-einvoicing-tax.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
 - slug: teamleader-zapier
@@ -67,7 +67,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/teamleader_focus
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/teamleader_focus
   source: edge
   relationship: ipaas-bridge
   contract_reference:
