@@ -64,5 +64,153 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Teamleader is a company surfaced via the API Evangelist harvest backlog (source: crm) and added to the network as a stub for full-pipeline profiling.
-- https://teamleader.eu/
+Teamleader provides an integrated CRM, invoicing, quotations, and project management platform for SMEs. Its Focus product offers a unified workspace to manage customers, sales, finances, and projects, with a marketplace for extensions and robust API access for developers.
+
+**Areas:** CRM · Invoicing · Project Management · Software-as-a-Service · Small Business
+
+## Teamleader on APIs.io
+
+Everything profiled for Teamleader is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/teamleader/](https://apis.io/providers/teamleader/)** — or go straight to one of the APIs or properties below.
+
+### APIs (14)
+
+- [Teamleader Contacts API](https://apis.io/apis/teamleader/teamleader-contacts-api/) — The Contacts API from Teamleader — 11 operation(s) for contacts.
+- [Teamleader Daysoff API](https://apis.io/apis/teamleader/teamleader-daysoff-api/) — The Daysoff API from Teamleader — 1 operation(s) for daysoff.
+- [Teamleader Deals API](https://apis.io/apis/teamleader/teamleader-deals-api/) — The Deals API from Teamleader — 8 operation(s) for deals.
+- [Teamleader Expenses API](https://apis.io/apis/teamleader/teamleader-expenses-api/) — The Expenses API from Teamleader — 1 operation(s) for expenses.
+- [Teamleader Files API](https://apis.io/apis/teamleader/teamleader-files-api/) — The Files API from Teamleader — 5 operation(s) for files.
+- [Teamleader Invoices API](https://apis.io/apis/teamleader/teamleader-invoices-api/) — The Invoices API from Teamleader — 9 operation(s) for invoices.
+- [Teamleader Leveltwoareas API](https://apis.io/apis/teamleader/teamleader-leveltwoareas-api/) — The Leveltwoareas API from Teamleader — 1 operation(s) for leveltwoareas.
+- [Teamleader Lostreasons API](https://apis.io/apis/teamleader/teamleader-lostreasons-api/) — The Lostreasons API from Teamleader — 1 operation(s) for lostreasons.
+- [Teamleader Tasks API](https://apis.io/apis/teamleader/teamleader-tasks-api/) — The Tasks API from Teamleader — 8 operation(s) for tasks.
+- [Teamleader Tickets API](https://apis.io/apis/teamleader/teamleader-tickets-api/) — The Tickets API from Teamleader — 9 operation(s) for tickets.
+- [Teamleader Ticketstatus API](https://apis.io/apis/teamleader/teamleader-ticketstatus-api/) — The Ticketstatus API from Teamleader — 1 operation(s) for ticketstatus.
+- [Teamleader Timers API](https://apis.io/apis/teamleader/teamleader-timers-api/) — The Timers API from Teamleader — 1 operation(s) for timers.
+- [Teamleader Useravailability API](https://apis.io/apis/teamleader/teamleader-useravailability-api/) — The Useravailability API from Teamleader — 1 operation(s) for useravailability.
+- [Teamleader Payment Methods API](https://apis.io/apis/teamleader/teamleader-payment-methods-api/) — The Payment Methods API from Teamleader — 1 operation(s) for payment methods.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Teamleader Webhooks](https://apis.io/asyncapis/teamleader/teamleader-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [teamleader-mcp.yml](https://apis.io/servers/teamleader/teamleader-mcp-yml/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Teamleader Agentic Access](https://apis.io/agentic-access/teamleader/teamleader-agentic-access/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PostContactsAddRequest](https://apis.io/schemas/teamleader/teamleader-post-contacts-add-request/)
+- [PostDealsCreateRequest](https://apis.io/schemas/teamleader/teamleader-post-deals-create-request/)
+- [PostInvoicesDraftRequest](https://apis.io/schemas/teamleader/teamleader-post-invoices-draft-request/)
+- [PostInvoicesUpdateRequest](https://apis.io/schemas/teamleader/teamleader-post-invoices-update-request/)
+- [PostTasksCreateRequest](https://apis.io/schemas/teamleader/teamleader-post-tasks-create-request/)
+- [PostTicketsCreateRequest](https://apis.io/schemas/teamleader/teamleader-post-tickets-create-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Teamleader Context](https://apis.io/jsonld/teamleader/teamleader-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Teamleader API Rules](https://apis.io/rules/teamleader/teamleader-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Teamleader Authentication](https://apis.io/security/teamleader/teamleader-authentication/)
+- [Teamleader Domain Security](https://apis.io/security/teamleader/teamleader-domain-security/)
+- [Teamleader Trust Center](https://apis.io/security/teamleader/teamleader-trust-center/)
+- [Teamleader Vulnerability Disclosure](https://apis.io/security/teamleader/teamleader-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.teamleader.eu/)
+- [Documentation](https://developer.focus.teamleader.eu/docs/introduction)
+- [Getting started](https://developer.focus.teamleader.eu/docs/introduction)
+- [API reference](https://developer.focus.teamleader.eu/docs/api)
+- [Pricing](https://www.teamleader.eu/pricing)
+- [Sign up](https://signup.focus.teamleader.eu/)
+- [Support](https://support.focus.teamleader.eu/hc/en-150)
+- [Blog](https://www.teamleader.eu/blog)
+- [Compliance](https://www.teamleader.eu/legal/security-teamleader-focus)
+- [Terms of service](https://www.teamleader.eu/legal/terms-of-service-teamleader-focus)
+- [Privacy policy](https://www.teamleader.eu/legal/privacy-statement)
+- [Status](https://status.teamleader.eu/)
+
+## API Evangelist rating
+
+**Kin Score 52.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.4 |
+| Contract quality | 33.4 |
+| Contract governance | 22.0 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 60.5 |
+
+**Agent readiness 23.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/teamleader/](https://apis.io/providers/teamleader/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Teamleader: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/teamleader/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
